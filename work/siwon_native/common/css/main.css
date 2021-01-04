@@ -1,0 +1,103 @@
+/* 메인 */
+.sec_tit{font-size:20px;line-height:1.2}
+.sec_tit b{font-size:23px}
+.sec_visual{position:relative}
+.sec_visual a{display:block}
+.sec_visual .visual_box{position:absolute;top:0;left:0;width:100%}
+.sec_visual .visual_box img{position:absolute;top:0;left:0;width:100%;height:auto}
+.sec_visual .swiper-slide .visual_txt{padding:9vw 0 0 4.5vw;font-size:7vw;color:#fff;font-weight:bold;line-height:1.3;opacity:0;transform:translateY(7vw);transition:all .5s ease-out}
+.sec_visual .swiper-slide-active .visual_txt{opacity:1;transform:translateY(0)}
+.sec_visual .swiper-slide .visual_img{opacity:0;transform:translateY(7vw);transition:all .5s .3s}
+.sec_visual .swiper-slide-active .visual_img{opacity:1;transform:translateY(0)}
+.sec01{position:relative;padding:40px 0}
+.sec01:after{content:'';position:absolute;bottom:0;right:0;z-index:-1;width:82%;height:calc(100% - 85px);border-top-left-radius:40px;background:#f4fdfd}
+.sec01 .sec_tit{margin-bottom:40px;text-align:right}
+.sec01 .sec_tit b{color:#1a1a1a}
+.sec01 .event_sl .swiper-container{padding-left:4.5vw;padding-right:4.5vw}
+.sec01 .event_sl li{display:inline-flex;width:150px}
+.sec01 .event_sl li + li{margin-left:5px}
+.sec01 .event_sl li a{display:block}
+.sec01 .sec_tit .name{font-size:20px}
+.sec01 .sec_tit .name span{font-size:23px;vertical-align:bottom}
+.sec01 .prev_lec .lec_area a{display:block;position:relative;height:110px;padding:15px 10px 15px 160px;border:1px solid #eef2f2;border-bottom-left-radius:20px;background:#fff}
+.sec01 .prev_lec .lec_area a::after{content:'';display:inline-block;position:absolute;bottom:10px;right:10px;width:30px;height:30px;background:url(https://siwon-cdn.siwonschool.com/native/m/main/btn_play.png) center center no-repeat;background-size:contain}
+.sec01 .prev_lec .lec_area a .img_box{position:absolute;top:15px;left:10px;width:140px;height:80px;overflow:hidden;background-size:cover;background-position:center center}
+.sec01 .prev_lec .lec_area a .txt_box{padding-top:.5em;font-size:12px}
+.sec01 .prev_lec .lec_area a .txt_box .pack_name{display:block;color:#a582f7}
+.sec01 .prev_lec .lec_area a .txt_box .lec_name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sec01 .prev_lec .info{display:flex;margin-top:15px}
+.sec01 .prev_lec .info .box{display:flex;justify-content:space-between;flex:1;height:50px;padding:0 20px;border-radius:25px;font-size:14px;color:#fff;line-height:50px;font-weight:700;background:#129ea3;box-shadow:4.1px 11.3px 10px 0 rgba(42, 97, 101, 0.13)}
+.sec01 .prev_lec .info .box + .box{margin-left:10px}
+.sec01 .prev_lec .info .box .cur span{font-size:.9em}
+.sec_ban a{display:block}
+.sec02{padding-top:60px;padding-bottom:150px;background:url(https://siwon-cdn.siwonschool.com/native/m/main/sec02_teacher.png) center bottom no-repeat;background-size:auto 140px}
+.sec02 .sec02_con{width:91vw;max-width:450px;margin:0 auto;padding-top:20px}
+.sec02 .sec02_con li{opacity:0;transform:translateY(20px);transition:all .5s}
+.sec02 .sec02_con[data-effect="show"] li{opacity:1;transform:translateY(0)}
+.sec02 .sec02_con li:nth-child(2){transition-delay:.3s}
+.sec02 .sec02_con li:nth-child(3){transition-delay:.6s}
+.sec02 .sec02_con li:nth-child(4){transition-delay:.9s}
+.sec02 .sec02_con li + li{margin-top:20px}
+.sec02 .sec02_con li img{width:100%}
+.sec03{padding:40px 4.5vw 100px;background:#343447}
+.sec03 .sec_tit{margin-bottom:40px;color:#fff;text-align:right}
+.sec03 .sec_tit .total{color:#68e4ff;font-weight:700}
+.sec03 .review_wrap .box{border-top-left-radius:30px;background:#fff}
+.sec03 .review_wrap .box .tit{display:block;position:relative;padding:20px calc(4.5vw + 20px) 20px 4.5vw;font-size:14px}
+.sec03 .review_wrap .box .tit i{display:block;font-size:13px;font-weight:bold;color:#1a1a1a}
+.sec03 .review_wrap .box .tit::after{content:'';position:absolute;top:50%;right:4.5vw;display:inline-block;width:15px;height:9px;margin-top:-4px;background:url(https://siwon-cdn.siwonschool.com/native/m/main/ico_arr_review.png) center center no-repeat;background-size:contain}
+.sec03 .review_wrap .box .tit.on::after{transform:rotate(180deg)}
+.sec03 .review_wrap .box .cont{display:none;position:relative;padding:20px 4.5vw 80px;background:#f6f5fa}
+.sec03 .review_wrap .box .tit.on + .cont{display:block}
+.sec03 .review_wrap .box .cont .cont_tit{display:block;margin-bottom:1em;font-size:14px;font-weight:700}
+.sec03 .review_wrap .box .cont .user{display:inline-block;position:absolute;bottom:20px;right:calc(4.5vw + 20px);height:30px;padding-left:1.3em;padding-right:.5em;border-radius:15px 0 0 15px;color:#fff;line-height:30px;font-weight:300;background:#34badc}
+.sec03 .review_wrap .box .cont .user em{vertical-align:top}
+.sec03 .review_wrap .box .cont .user::after{content:'';position:absolute;top:0;left:100%;border-width:15px 10px;border-style:solid;border-left-color:#34badc;border-top-color:#34badc;border-bottom-color:transparent;border-right-color:transparent}
+.sec03 .date{margin-top:1em;font-size:12px;color:#fff;text-align:right}
+.sec03 .btn_review{display:block;width:auto;height:50px;width:220px;margin:40px auto 0;border:1px solid #f9f9ff;font-size:13px;color:#f9f9ff;line-height:48px;text-align:center;vertical-align:middle;box-shadow: 4.1px 11.3px 29px 0 rgba(0, 0, 0, 0.45)}
+.sec04{padding-bottom:20px}
+.sec04 .sec_tit{position:relative;width:calc(95.5vw - 80px);margin-top:-40px;margin-bottom:20px;padding:40px 0 20px 4.5vw;color:#fff;background:#766cee;opacity:0;transform:translateX(-30vw);transition:all 1s}
+.sec04 .sec_tit[data-effect="show"]{opacity:1;transform:translateX(0)}
+.sec04 .sec_tit::after{content:'';position:absolute;top:0;left:100%;border-width:69px 40px;border-style:solid;border-left-color:#766cee;border-top-color:#766cee;border-bottom-color:transparent;border-right-color:transparent}
+.sec04 .box{position:relative;margin:0 4.5vw 130px;padding:30px 10px 170px;border:1px solid #a582f7;border-bottom-right-radius:30px;text-align:center;opacity:0;transform:translateY(30px);transition:all 1s}
+.sec04 .box[data-effect="show"]{opacity:1;transform:translateY(0)}
+.sec04 .box .tit{font-size:22px;font-weight:bold;color:#a582f7}
+.sec04 .box .desc{margin-top:.5em;font-size:12px}
+.sec04 .box .desc .feature{display:inline-block;margin-bottom:.5em;font-weight:700}
+.sec04 .box .btm{position:absolute;bottom:-90px;left:0;width:100%;text-align:center}
+.sec04 .box .btm img{display:inline-block;position:relative;left:50%;height:250px;width:auto;transform:translateX(-50%)}
+.sec04 .box .btm .bt_more{display:block;position:absolute;bottom:0;left:50%;margin-left:-110px;height:50px;width:220px;padding:0 20px;font-size:13px;color:#fff;background:#a582f7;line-height:50px;text-align:left;vertical-align:middle}
+.sec04 .box .btm .bt_more .arr{display:inline-block;position:absolute;top:50%;right:20px;width:40px;height:7px;margin-top:-4px;background:url(https://siwon-cdn.siwonschool.com/native/m/main/arrow.png) right center no-repeat;background-size:contain}
+.sec04 .box.max{border-color:#129ea3}
+.sec04 .box.max .tit{color:#129ea3}
+.sec04 .box.max .btm .bt_more{background:#129ea3}
+.sec05{padding:60px 0;background:#f6f2fc}
+.sec05 .sec_tit{text-align:right}
+.sec05 .sec_tit + .desc{margin-top:1em;font-size:14px;color:#a582f7;font-weight:700;text-align:right}
+.sec05 .steps{margin-top:30px}
+.sec05 .steps li{position:relative;padding:15px 10px;border:1px solid #dbcded}
+.sec05 .steps li::after{content:'';display:inline-block;position:absolute;bottom:10px;right:10px;z-index:0;height:4em;width:100%;background-position:right bottom;background-repeat:no-repeat;background-size:auto 100%}
+.sec05 .steps li.step1::after{background-image:url(https://siwon-cdn.siwonschool.com/native/m/main/sec05_step1_lv.png)}
+.sec05 .steps li.step2::after{background-image:url(https://siwon-cdn.siwonschool.com/native/m/main/sec05_step2_lv.png)}
+.sec05 .steps li.step3::after{background-image:url(https://siwon-cdn.siwonschool.com/native/m/main/sec05_step3_lv.png)}
+.sec05 .steps li.step4::after{background-image:url(https://siwon-cdn.siwonschool.com/native/m/main/sec05_step4_lv.png)}
+.sec05 .steps li + li{margin-top:20px}
+.sec05 .steps li .tit{display:inline-block;position:relative;width:6.2em;font-size:16px;color:transparent;background-size:auto 100%;background-repeat:no-repeat;background-position:left center;opacity:0;transform:translateY(20px);transition:all .5s}
+.sec05 .steps li .tit::after{content:'';display:inline-block;position:absolute;bottom:0;left:calc(100% + 5px);width:50px;height:4px;background:url(https://siwon-cdn.siwonschool.com/native/m/main/sec05_tit_tail.png) right bottom no-repeat;background-size:auto 100%}
+.sec05 .steps li.step1 .tit{background-image:url(https://siwon-cdn.siwonschool.com/native/m/main/sec05_step1_tit.png)}
+.sec05 .steps li.step2 .tit{background-image:url(https://siwon-cdn.siwonschool.com/native/m/main/sec05_step2_tit.png)}
+.sec05 .steps li.step3 .tit{background-image:url(https://siwon-cdn.siwonschool.com/native/m/main/sec05_step3_tit.png)}
+.sec05 .steps li.step4 .tit{background-image:url(https://siwon-cdn.siwonschool.com/native/m/main/sec05_step4_tit.png)}
+.sec05 .steps li .desc{padding-top:.8em;padding-bottom:2em;font-size:12px;opacity:0;transform:translateY(20px);transition:all .5s;transition-delay: .3s}
+.sec05 .steps li .desc b{font-size:13px}
+.sec05 .steps li[data-effect="show"] .tit{opacity:1;transform:translateY(0)}
+.sec05 .steps li[data-effect="show"] .desc{opacity:1;transform:translateY(0)}
+.sec07{padding:100px 0 60px;text-align:center;background:#262125 url(https://siwon-cdn.siwonschool.com/native/m/main/sec07_bg.jpg) top center no-repeat;background-size:cover}
+.sec07 .content{position:relative;z-index:1;padding:100px 0 60px;text-align:center}
+.sec07 .desc{font-size:20px;color:#fff}
+.sec07 .bt_go{display:block;height:50px;width:220px;margin:40px auto 0;border:1px solid #f9f9ff;font-size:13px;color:#f9f9ff;line-height:48px;text-align:center;vertical-align:middle}
+.sec_notice{height:50px;background:#676770}
+.sec_notice a{display:block;position:relative;height:50px;padding-left:80px;padding-right:60px}
+.sec_notice a::before{content:'공지';display:inline-block;position:absolute;left:4.5vw;top:50%;height:26px;margin-top:-13px;padding:0 1em;border-radius:13px;line-height:26px;color:#676767;background:#fff}
+.sec_notice a::after{content:'';display:inline-block;position:absolute;right:4.5vw;top:50%;width:22px;height:22px;margin-top:-11px;background:url(https://siwon-cdn.siwonschool.com/native/m/main/ico_more_notice.png) center center no-repeat;background-size:contain}
+.sec_notice a .tit{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;height:50px;line-height:50px;color:#fff;font-weight:300}

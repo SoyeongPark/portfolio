@@ -1,0 +1,99 @@
+/* 연장/재수강 */
+@keyframes bgsize-up-down {
+  0% {background-size:auto 100%}
+  100% {background-size:auto 125%}
+}
+@keyframes tracking-in-contract {
+  0% {letter-spacing: 1em; opacity: 0}
+  40% {opacity: 0.6;}
+  100% {letter-spacing: normal;opacity: 1}
+}
+@keyframes tracking-in-expand {
+  0% {letter-spacing: -0.5em;opacity: 0}
+  40% {opacity: 0.6}
+  100% {letter-spacing:-.1em;opacity: 1}
+}
+@keyframes waggle {
+	0%, 33.33% {transform:scale(1)}
+	33.34%, 66.66% {transform:scale(1.1)}
+	66.67%, 100%{transform:scale(1)}
+}
+@keyframes fade-in-bottom {
+  0% {transform:translateY(50px);opacity:0}
+  100% {transform:translateY(0);opacity:1}
+}
+.products_ext .sec_visual{display:flex;flex-direction:column;align-items:center;height:170px;color:#fff;justify-content:center;background:url(https://siwon-cdn.siwonschool.com/native/m/products_ext/bg_visual.png) center center no-repeat;animation:bgsize-up-down 10s ease-out alternate infinite}
+.products_ext .sec_visual .desc{font-size:12px}
+.products_ext .sec_visual .tit{font-size:25px;font-weight:500;letter-spacing:-.1em;line-height:1;white-space:nowrap;animation:tracking-in-contract 1.3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both}
+.products_ext .sec01{padding-top:70px}
+.products_ext .sec01 .sec_tit{font-size:22px;font-weight:700;color:#1a1a1a;text-align:center;line-height:1.2}
+.products_ext .sec01 .img_box{position:relative;height:520px;margin-top:50px}
+.products_ext .sec01 .img_box .sec01_img{position:absolute;bottom:0;left:50%;height:300px;width:auto;transform:translateX(-50%)}
+.products_ext .sec01 .img_box .sec01_con{position:absolute;bottom:0;left:0;width:100%;max-width:640px;height:100%}
+.products_ext .sec01 .img_box .sec01_con .con{position:absolute;animation:waggle 3s both infinite}
+.products_ext .sec01 .img_box .sec01_con .con.con01{left:5.5%;bottom:192px;width:120px;height:auto}
+.products_ext .sec01 .img_box .sec01_con .con.con02{left:6.25%;bottom:320px;width:118px;height:auto;animation-delay:-1s}
+.products_ext .sec01 .img_box .sec01_con .con.con03{left:50%;bottom:384px;width:122px;height:auto;margin-left:-61px;animation-delay:-2s}
+.products_ext .sec01 .img_box .sec01_con .con.con04{right:4%;bottom:328px;width:115px;height:auto}
+.products_ext .sec01 .img_box .sec01_con .con.con05{right:2%;bottom:192px;width:120px;height:auto;animation-delay:-1s}
+.products_ext .sec02{position:relative;height:282px;padding-top:70px;color:#fff;text-align:center;background:url(https://siwon-cdn.siwonschool.com/native/m/products_ext/bg_percentage.png) center top no-repeat;background-size:100% 100%}
+.products_ext .sec02::after{content:'';position:absolute;bottom:16%;left:0;width:100%;height:50%;background:url(https://siwon-cdn.siwonschool.com/native/m/products_ext/45per.png) center bottom no-repeat;background-size:auto 100%;animation:fade-in-bottom 0.8s 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;}
+.products_ext .sec02 .sec_tit{font-size:22px;font-weight:700}
+.products_ext .sec02 .sec_desc{margin-top:1em;font-size:12px;animation: fade-in-bottom 0.8s 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;}
+.products_ext .sec02 .sec_desc em{font-size:1.2em;font-weight:500;vertical-align:bottom}
+.products_ext .sec_table .sec_tit{font-size:22px;font-weight:700;color:#1a1a1a;text-align:center}
+.products_ext .sec_table .sec_desc{margin-bottom:1em;text-align:center}
+
+
+.products_ext .sec_table .table_area{margin:20px 3px 0;padding:6px;border:1px solid #4a91f0;border-radius:2px}
+.products_ext .sec_table .price_table{position:relative;width:100%}
+.products_ext .sec_table .price_table:after{content:'';display:inline-block;position:absolute;top:-4px;left:-4px;width:calc(100% + 6px);height:calc(100% + 6px);border:1px solid #d5d5d5;border-radius:3px}
+.products_ext .sec_table .price_table thead .bg{position:relative;height:4em;background:#f4f8fb;font-size:13px;color:#2b2b2b;line-height:4;text-align:center}
+.products_ext .sec_table .price_table thead th:first-child .bg{border-radius:0 0 3px 3px}
+.products_ext .sec_table .price_table thead th:last-child .bg{border-radius:3px 3px 0 0}
+.products_ext .sec_table .price_table thead th + th{border-left:1px solid #d5d5d5}
+.products_ext .sec_table .price_table thead .bg .cmt{display:inline-block;white-space:nowrap;position:absolute;top:-15px;left:50%;z-index:1;transform:translateX(-50%);height:1.8em;padding:0 1.5em;border-radius:.9em;font-size:12px;color:#fff;line-height:1.8;font-weight:300;background:#6190f9;animation:blink 1s infinite}
+.products_ext .sec_table .price_table thead .bg .cmt:after{content:'';display:inline-block;position:absolute;top:100%;left:50%;border-top:6px solid #6190f9;border-left:3px solid transparent;border-right:3px solid transparent}
+.products_ext .sec_table .price_table tbody th,
+.products_ext .sec_table .price_table tbody td{width:25%;height:4em;font-size:13px;color:#2b2b2b;text-align:center}
+.products_ext .sec_table .price_table tbody th{font-weight:500}
+.products_ext .sec_table .price_table tbody td{border-left:1px solid #d5d5d5}
+.products_ext .sec_table .table_desc{margin:.7em 0;white-space:nowrap;font-size:12px;color:#999;text-align:right}
+.products_ext .sec_table .type_desc{width:100%;padding:.5em;box-sizing:border-box;border-radius:4px;font-size:12px;color:#999;line-height:1.6;background:#f4f8fb}
+.products_ext .sec_table .type_desc .type{display:inline-block}
+.products_ext .sec_table .bts{text-align:center}
+.products_ext .sec_table .bt_comm{margin-top:40px;}
+.products_ext .bt_comm{display:inline-block;position:relative;height:4em;width:80vw;border-radius:.7em;box-sizing:border-box;font-size:15px;color:#fff;line-height:4;background:#000}
+.products_ext .bt_comm:after{content:'';display:inline-block;position:absolute;top:50%;right:1.5em;width:.7em;height:.7em;margin-top:-.7em;border-right:1px solid #fff;border-bottom:1px solid #fff;transform-origin:right center;transform:rotateZ(-45deg)}
+.products_ext .sec_products{padding:16vw 0 8vw}
+.products_ext .sec_products .sec_tit{font-size:22px;font-weight:700;color:#1a1a1a;margin-bottom:1.5em;text-align:center}
+.products_ext .sec_products .sec_tit .name{color:#2ab4ed;font-weight:500;vertical-align:bottom}
+.products_ext .sec_products .products_box{margin:0 3px;padding:0 5px;border:1px solid #d5d5d5;border-radius:3px}
+.products_ext .sec_products .list li{padding:20px 0}
+.products_ext .sec_products .list li + li{border-top:1px solid #515151}
+.products_ext .sec_products .list .info_box{padding-left:10px}
+.products_ext .sec_products .list .info_box .prod_tit{margin-bottom:1;font-size:16px;font-weight:700;color:#181818}
+.products_ext .sec_products .list .info_box .info{font-size:13px;line-height:1.6;color:#717171;padding:.5em 0 1em}
+.products_ext .sec_products .list .type{display:inline-block;width:6em;font-weight:700}
+.products_ext .sec_products .list .price_box{padding-bottom:.5em;border-bottom:1px solid #d5d5d5;padding-left:10px}
+.products_ext .sec_products .list .price_box .price_org{display:inline-block;position:relative;padding-right:.5em;padding-left:.3em;vertical-align:bottom}
+.products_ext .sec_products .list .price_box .price_org:before{content:'';display:inline-block;position:absolute;top:47%;left:0;right:0;border-bottom:1px solid #000}
+.products_ext .sec_products .list .price_box .price_org:after{content:'';display:inline-block;position:absolute;top:50%;right:1px;width:5px;border-bottom:1px solid #000;transform-origin:right top;transform:rotateZ(-45deg)}
+.products_ext .sec_products .list .select_box{padding:1em 10px}
+.products_ext .sec_products .list .sel_item{position:relative;font-size:13px;line-height:15px}
+.products_ext .sec_products .list .sel_item + .sel_item{margin-top:10px}
+.products_ext .sec_products .list .sel_item .radio_comm + label:after{background-color:#0f69ff}
+.products_ext .sec_products .list .sel_item .type{display:inline-block;color:#454545;vertical-align:middle}
+.products_ext .sec_products .list .sel_item .price{position:absolute;top:0;right:0;color:#0f69ff;line-height:18px}
+.products_ext .sec_products .list .sel_item .price .price_num{font-size:1.2em;font-weight:bold}
+.products_ext .sec_products .list .bt_apply{width:100%;height:4em;border-radius:3px;box-sizing:border-box;font-size:13px;color:#fff;line-height:4;text-align:center;background:#1a1a1a}
+.products_ext .sec_products .bt_more{display:inline-block;position:relative;height:4em;width:100%;margin:20px 0;padding:0 6em;border-radius:3px;border:1px solid #1a1a1a;box-sizing:border-box;font-size:13px;color:#1a1a1a;line-height:4;background:#fff}
+.products_ext .sec_products .products_box.no{padding:80px 5px 20px;text-align:center}
+.products_ext .sec_products .no_list{padding:80px 0;color:#717171;line-height:1.6;text-align:center;background:url(https://siwon-cdn.siwonschool.com/native/m/products_ext/ico_notice.png) center top no-repeat;background-size:70px auto;}
+.products_ext .sec_products .bt_comm.apply{width:100%}
+.products_ext .sec_notice{padding:40px 1em;background:#2d2d2d
+}
+.products_ext .sec_notice .notice_tit{padding-bottom:.5em;font-size:18px;color:#fff;font-weight:700}
+.products_ext .sec_notice .list{margin-top:1em}
+.products_ext .sec_notice .list li{position:relative;font-size:13px;color:#fff;line-height:1.8}
+.products_ext .sec_notice .bt_go{display:inline-block;margin-top:1em;color:#fff;border-bottom:1px solid #fff}

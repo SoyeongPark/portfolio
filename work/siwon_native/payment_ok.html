@@ -1,0 +1,131 @@
+<?php // page 결제완료 ?>
+<?php require_once 'header.html'; ?>
+
+<link type="text/css" href="common/css/payment.css" rel="stylesheet">
+<div id="siwon_container" class="payment_section">
+	<div class="finish_info">
+		<h3 class="tit_finish">주문이 정상적으로 완료 되었습니다.</h3>
+		<div class="finish_desc">
+			<div class="number_box">주문번호<span class="number">BA15620446681923357</span></div>
+			<ul class="info_list li_st2">
+				<li>					
+                    <span class="th">입금은행</span>
+                    <span class="td">신한은행 X1234567890</span>
+				</li>
+				<li>					
+                    <span class="th">예금주</span>
+                    <span class="td">(주)에스제이더블유인터내셔널</span>
+				</li>
+				<li>					
+                    <span class="th">입금자명</span>
+                    <span class="td">김땡땡</span>
+				</li>
+				<li>					
+                    <span class="th">김땡땡</span>
+                    <span class="td">2019-07-15</span>
+				</li>
+			</ul>
+		</div>
+	</div><!-- // 주문 완료 정보 -->
+
+	<div class="payment_info">
+        <h3 class="tit_info">주문상품 <span class="view">1건</span></h3>
+        <div class="info_cont">
+            <ul class="order_list li_st1">
+                <li>
+					<span class="subject">[프로모션] [신규]기적의영어탈출기끝장팩_60일연장<span class="num_box">425일</span></span>
+					<span class="price_info">299,000원</span>
+				</li>
+            </ul>
+        </div>
+    </div><!-- // 주문 상품 -->
+
+	<div class="payment_info">
+        <h3 class="tit_info">구매자 정보<span class="view">김땡땡(010-1234-1234)</span></h3>
+        <div class="info_cont">
+            <ul class="buyer_info li_st2">
+                <li>
+                    <span class="th">이름</span>
+                    <span class="td">김땡땡</span>
+                </li>
+                <li>
+                    <span class="th">휴대폰</span>
+                    <span class="td">010-1234-1234</span>
+                </li>
+                <li>
+                    <span class="th">이메일</span>
+                    <span class="td">ddangddang@nate.com</span>
+                </li>
+            </ul>
+        </div>
+    </div><!-- // 구매자 정보 -->
+
+	<div class="payment_info">
+         <h3 class="tit_info">배송지 정보</h3>
+        <div class="info_cont">
+            <ul class="li_st2">
+                <li>
+                    <span class="th">이름</span>
+                    <span class="td">김땡땡</span>
+                </li>
+                <li>
+                    <span class="th">휴대폰</span>
+                    <span class="td">010-1234-1234</span>
+                </li>
+                <li>
+                    <span class="th">배송지</span>
+                    <span class="td">서울시 영등포구 국회대로 74길 12 남중빌딩 시원스쿨(12345)</span>
+                </li>
+                <li>
+                    <span class="th">배송메모</span>
+                    <span class="td">경비실에 맡겨주세요</span>
+                </li>
+            </ul>
+        </div>
+    </div><!-- // 구매자 정보 -->
+
+	 <div class="payment_info">
+        <h3 class="tit_info">추가 할인</h3>
+        <div class="info_cont">
+            <ul class="add_sale li_st1">
+                <li>
+					<span class="subject">[신규]기적의영어탈출기끝장팩_60일연장</span>
+					<span class="sale_info"><span class="price">399,000원</span></span>
+                </li>
+            </ul>
+        </div>
+    </div><!-- // 추가 할인 -->
+
+	<div class="payment_info total_info">
+        <h3 class="tit_info">최종 결제금액<span class="view" id="total_trade_price_view">299,000원</span></h3>
+        <div class="info_cont">
+            <ul class="total_pay">
+                <li>
+					<span class="th">주문금액</span><span class="td"><strong>299,000원</strong></span>
+				</li>
+                <li>
+					<span class="th">배송비</span><span class="td"><strong class="plus">+2,500원</strong></span>
+				</li>
+                <li>
+					<span class="th">배송비할인</span><span class="td"><strong class="minus">-2,500원</strong></span>
+				</li>
+                <li>
+					<span class="th">추가할인</span><span class="td" id="add_discount"><strong class="minus">-0원</strong></span>
+				</li>
+                <li class="total_sale">
+					<span class="th">총 할인금액</span><span class="td" id="tot_discount"><strong>-2,500원</strong></span>
+				</li>
+            </ul>
+            <div class="total">
+                <span class="th">총 결제금액</span>
+				<span class="td pay"><strong id="total_trade_price">299,000원</strong></span>
+            </div>
+        </div>
+    </div><!-- // 최종 결제금액 -->
+
+	<div class="payment_btm">
+        <a href="/?s=myclass" class="bt_st1">내강의실</a><a href="/?s=mypage" class="bt_st1">마이페이지</a>
+    </div>
+</div><!-- // siwon_container -->
+
+<?php require_once 'footer.html'; ?>

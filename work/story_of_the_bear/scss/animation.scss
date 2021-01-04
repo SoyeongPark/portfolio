@@ -1,0 +1,217 @@
+/**
+ * Helpers
+ */
+@import 'helpers/_mixins';
+@import 'helpers/_variables';
+
+/**
+ * animation
+ */
+@keyframes bounce{
+	0%,20%,53%,100%{
+		animation-timing-function:cubic-bezier(.215,.61,.355,1);
+		transform:translateZ(0)
+	}
+	40%,43%{
+		animation-timing-function:cubic-bezier(.755,.05,.855,.06);
+		transform:translate3d(0,-10px,0) scaleY(1.1)
+	}
+	70%{
+		animation-timing-function:cubic-bezier(.755,.05,.855,.06);
+		transform:translate3d(0,-5px,0) scaleY(1.05)
+	}
+	80%{
+		transition-timing-function:cubic-bezier(.215,.61,.355,1);
+		transform:translateZ(0) scaleY(.95)
+	}
+	90%{
+		transform:translate3d(0,-1px,0) scaleY(1.02)
+	}
+}
+@keyframes slide-right{
+	0%{
+		transform: translateX(-2%);
+	}
+	100%{
+		transform: translateX(0);
+	}
+}
+@keyframes slide-right-blur{
+	0%{
+		transform: translateX(-2%);
+		filter: blur(4px);
+	}
+	100%{
+		transform: translateX(0);
+		filter: blur(0);
+	}
+}
+@keyframes slide-left{
+	0%{
+		transform: translateX(2%);
+	}
+	100%{
+		transform: translateX(0);
+	}
+}
+@keyframes slide-left-blur{
+	0%{
+		transform: translateX(2%);
+		filter: blur(4px);
+	}
+	100%{
+		transform: translateX(0);
+		filter: blur(0);
+	}
+}
+@keyframes slide-up{
+	0%{
+		transform: translateY(3%);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}
+@keyframes slide-up-blur{
+	0%{
+		transform: translateY(3%);
+		filter: blur(4px);
+	}
+	100%{
+		transform: translateY(0);
+		filter: blur(0);
+	}
+}
+@keyframes slide-down{
+	0%{
+		transform: translateY(-3%);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}
+@keyframes slide-down-blur{
+	0%{
+		transform: translateY(-3%);
+		filter: blur(4px);
+	}
+	100%{
+		transform: translateY(0);
+		filter: blur(0);
+	}
+}
+@keyframes blur-out{
+	0%{
+		filter: blur(4px);
+	}
+	100%{
+		filter: blur(0);
+	}
+}
+@keyframes zoom-out{
+	0%{
+		transform: scale(1.05);
+		transform-origin: 50%, 50%;
+		filter: blur(4px);
+	}
+	100%{
+		transform: scale(1);
+		filter: blur(0);
+	}
+}
+@keyframes fade-in{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+$aninames :(slide-right, slide-right-blur, slide-left, slide-left-blur, slide-up, slide-up-blur, slide-down, slide-down-blur, zoom-out, fade-in, blur-out);
+
+@each $aniname in $aninames {
+	.swiper-slide-active .#{$aniname} {
+		animation: {
+			name: #{$aniname};
+			duration: 3s;
+			timing-function: linear;
+			fill-mode: both;
+		}
+	}
+}
+
+@keyframes nod-right{
+	0%{
+		transform: rotate(0);
+	}
+	10%{
+		transform: rotate(5deg);
+	}
+	20%{
+		transform: rotate(0);
+	}
+}
+@keyframes nod-left{
+	0%{
+		transform: rotate(0);
+	}
+	10%{
+		transform: rotate(-5deg);
+	}
+	20%{
+		transform: rotate(0);
+	}
+}
+.swiper-slide-active .nod-right{
+	animation: {
+		name: nod-right;
+		duration: 2s;
+		timing-function: linear;
+		iteration-count: infinite;
+	}
+}
+.swiper-slide-active .nod-left{
+	animation: {
+		name: nod-left;
+		duration: 2s;
+		timing-function: linear;
+		iteration-count: infinite;
+	}
+}
+
+@keyframes float-up-down{
+	0%{
+		transform: translateY(-20px);
+	}
+	100%{
+		transform: translateX(0);
+	}
+}
+
+.swiper-slide-active .float-up-down{
+	animation: {
+		name: float-up-down;
+		iteration-count: infinite;
+		duration: 2s;
+		direction: alternate;
+		fill-mode: both;
+	}
+}
+@keyframes swing{
+	0%{
+		transform: rotate(0);
+	}
+	100%{
+		transform: rotate(-10deg);
+	}
+}
+.swiper-slide-active .swing{
+	animation: {
+		name: swing;
+		duration: 1s;
+		timing-function: ease-in-out;
+		iteration-count: infinite;
+		direction: alternate;
+	}
+}

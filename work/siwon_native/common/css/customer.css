@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+/* 공통 */
+.bt_btm{margin:20px 0}
+.bt_btm [class^="bt"]{width:100%}
+
+/* 고객센터 메인 */
+.main .inner{padding-top:20px;padding-bottom:20px}
+.main .inner.bg{background:#f6f5fa}
+.main .menu_box{background:#fff}
+.main .menu_box + .menu_box{margin-top:10px}
+.main .menu_box h3{height:34px;padding-left:40px;border:1px solid #dbdbdb;font-size:14px;font-weight:bold;line-height:34px}
+.main .menu_box h3 a{display:block}
+.main .menu_box ul{overflow:hidden;border:1px solid #dbdbdb;border-top:none}
+.main .menu_box ul li{position:relative;float:left;width:calc(100% / 3)}
+.main .menu_box ul li:before{position:absolute;top:50%;height:32px;border-left:1px solid #dbdbdb;transform:translateY(-50%);content:''}
+.main .menu_box ul li:first-child:before{content:normal}
+.main .menu_box ul li a{display:block;height:76px;padding-top:28px;text-align:center;box-sizing:border-box}
+.main .menu_box.faq h3{background:url(https://siwon-cdn.siwonschool.com/native/m/customer/ico_side_cs.png) no-repeat 15px center #fff;background-size:16px auto}
+.main .menu_box.onnon h3{background:url(https://siwon-cdn.siwonschool.com/native/m/customer/ico_side_study.png) no-repeat 15px center #fff;background-size:16px auto}
+.main .bt_btm{margin-bottom:0}
+.main .info{padding:20px 0}
+.main .info dl{font-size:12px;line-height:1.6;text-align:center}
+.main .info dl dt{padding-bottom:5px;font-size:18px;font-weight:bold}
+.main .info dl dd{color:#999}
+
+/* 공지사항 */
+.notice_view .file_box{margin-bottom:5px;padding:20px 0;border-bottom:1px solid #ccc;background:#fff;box-sizing:border-box}
+.notice_view .file_box .file_cnt{display:block;position:relative;margin-bottom:12px;padding-left:14px;font-size:12px}
+.notice_view .file_box .file_cnt > em{color:#766cee;vertical-align:top}
+.notice_view .file_box .file_cnt::before{display:block;position:absolute;top:2px;left:0;width:11px;height:13px;background:url(https://siwon-cdn.siwonschool.com/native/m/customer/ico_file.png) center no-repeat;background-size:11px 12px;content:''}
+.notice_view .file_box .file_list li{margin-top:5px;border:1px solid #ccc}
+.notice_view .file_box .file_list li:first-child{margin-top:10px}
+.notice_view .file_box .file_list li a{display:block;overflow:hidden;position:relative;width:100%;height:35px;padding:0 28px 0 10px;font-size:11px;line-height:35px;text-overflow:ellipsis;word-break:break-all;white-space:nowrap;box-sizing:border-box}
+.notice_view .file_box .file_list li a::after{display:block;position:absolute;top:11px;right:10px;width:13px;height:13px;background:url(https://siwon-cdn.siwonschool.com/native/m/customer/bt_file_down.png) center no-repeat;background-size:13px;content:''}
+
+/* 자주하는 질문 */
+.faq .tab_comm{margin:10px 0}
+
+/* 1:1 문의 */
+.qna_write{position:relative;padding-bottom:70px;background:#f6f5fa}
+.qna_write .inner{padding-top:15px}
+.qna_write .select_comm{width:100%;height:40px}
+.qna_write .input_comm{width:100%;height:40px;margin-top:10px}
+.qna_write .textarea_comm{width:100%;min-height:300px;margin-top:10px}
+.qna_write .file_box{position:relative;overflow:hidden;margin:10px 0 22px}
+.qna_write .file_box > input[type='text']{display:block;float:left;overflow:hidden;width:67.44%;height:40px;margin:0 1.56% 0 0;border:1px solid #dbdbdb;line-height:40px;font-size:13px;color:#111;white-space:nowrap;word-break:break-all;text-overflow:ellipsis}
+.qna_write .file_box > a{display:block;float:left;width:31%;height:40px;background:#222;font-size:13px;text-align:center;line-height:40px;color:#fff}
+.qna_write .file_box > input[type='file']{position:absolute;top:0;left:0;width:100%;height:40px;padding:0 10px;opacity:0;filter:alpha(opacity=0);cursor:pointer}
+.qna_write .file_box .txt_guide{float:left;width:100%;margin-top:8px;font-size:11px;color:#666}
+.qna_write .bts{display:flex;position:fixed;bottom:56px;left:0;z-index:100;width:100%;border-top:1px solid #dbdbdc}
+.qna_write .bts.stick{position:absolute;bottom:20px;border-bottom:1px solid #dbdbdc}
+.qna_write .bts .bt{flex:1;height:50px}
+.qna_write .bts .bt_cancle{background:#fff}
+.qna_write .bts .bt_send{color:#fff;background:#766cee}

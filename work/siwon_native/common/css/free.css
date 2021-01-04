@@ -1,0 +1,21 @@
+/* 무료체험 */
+.free_section .inner{padding-top:20px;padding-bottom:20px}
+.free .info_box .lec_name{margin-bottom:.3em;font-size:16px;font-weight:700}
+.free .info_box.max .lec_name{color:#129ea3}
+.free .info_box.native .lec_name{color:#a582f7}
+.free .info_box .lec_desc{margin-bottom:.5em}
+.free .info_box .lec_info .info{display:inline-block}
+.free .info_box .lec_info .info + .info::before{content:'|';margin-left:.5em;margin-right:.5em}
+.free .info_box .btn_prod{margin-top:20px}
+.free .info_box.max .btn_prod{border-color:#129ea3 !important}
+.free .info_box.native .btn_prod{border-color:#a582f7 !important}
+.free .free_area{background:#f6f5fa}
+.free .free_area .free_tit{margin-bottom:1em}
+.free .free_area ul + .free_tit{margin-top:2em}
+.free .free_area li{padding:10px;background:#fff}
+.free .free_area li + li{margin-top:1px}
+.free .free_area li a{display:block;position:relative;min-height:50px;padding-left:100px}
+.free .free_area li a .img_area{position:absolute;top:0;left:0;width:90px;height:50px;background-size:cover;background-position:center center}
+.free .free_area li a .txt_area{padding-top:.5em}
+.free .free_area li a .txt_area .cate{font-weight:700;color:#129ea3}
+.free .free_area li a .txt_area .tit{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}

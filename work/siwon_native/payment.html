@@ -1,0 +1,438 @@
+<?php // page 결제 ?>
+<?php require_once 'header.html'; ?>
+
+<?php
+	// 카드 무이자 문구 & 이미지
+	$card_txt = "5만원 이상 구매 시 최대 5개월 할부 혜택을 드립니다.";
+	$card_src = "http://img.siwonschool.com/max/m/products/card_info.png";
+?>
+<link type="text/css" href="common/css/payment.css" rel="stylesheet">
+<script>
+$(document).ready(function(){
+	// 쿠폰 관련 스크립트 안 넣어 놈
+
+	/* 결제 방식, 개인정보 동의 체크박스 초기화 */
+		$('input[name=method]').prop("checked",false);
+		$("input#agree1").prop("checked",false);
+		$("input#agree2").prop("checked",false);
+		$("input#agree3").prop("checked",false);
+
+	/* 타이틀 arw 클릭 시 내용 열기닫기  */
+		$('.payment_info .tit_info .arw').click(function(){
+			var $tit_info = $(this).closest('.tit_info');
+			if( $tit_info.attr('data-state') != 'fold' ){ 
+				$tit_info.attr('data-state','fold');
+				$tit_info.next('.info_cont').slideUp();
+				$tit_info.find('.view').fadeIn();
+			}else{
+				$tit_info.removeAttr('data-state');
+				$tit_info.next('.info_cont').slideDown();
+				$tit_info.find('.view').fadeOut();
+			}
+		});
+
+	/* 배송지 정보 항목 있을 시 */
+		if( $('.select_adds').length ){
+			$("#_adds1").trigger("click");		
+			$("#uname").val( $("#bname").val() );
+			$("#phone1").val( $("#bphone1").val() );
+			$("#phone2").val( $("#bphone2").val() );
+			$("#phone3").val( $("#bphone3").val() );
+			// $("#postnum").val( $("#bpost1").val()+"-"+$("#bpost2").val() );
+			$("#postnum").val( $("#zipcode").val() );
+			$("#address").val( $("#baddress").val() );
+			$("#address_detail").val( $("#bdetail").val() );
+		}
+		// 배송지 정보 기본, 신규 배송지 클릭 시
+		$("input[name='delivery_info']").on("click",function(){
+			if( $(this).val()  == '1'){
+				$("#uname").val( $("#bname").val() );
+				$("#phone1").val( $("#bphone1").val() );
+				$("#phone2").val( $("#bphone2").val() );
+				$("#phone3").val( $("#bphone3").val() );
+				$("#postnum").val( $("#bpost1").val()+"-"+$("#bpost2").val() );
+				$("#address").val( $("#baddress").val() );
+				$("#address_detail").val( $("#bdetail").val() );
+			}else{
+				$("#uname").val('');
+				$("#phone1").val('');
+				$("#phone2").val('');
+				$("#phone3").val('');
+				$("#postnum").val('');
+				$("#address").val('');
+				$("#address_detail").val('');
+			}
+		});
+
+	/* 결제 정보 선택시 내용 열기닫기 */
+		$(".payment_info input[name='method']").click(function(){
+			var mtd = $(this).attr("id");
+			var $payslctLi = $(this).closest("li");
+			$(".payment_info .pay_select li").removeClass("checked");
+			$payslctLi.addClass("checked");
+			$(".payment_info [id^='pay_c']").hide();
+			$(".payment_info #"+ mtd).show();
+			if( mtd == "pay_c1" ) alert("<필독>\r\n결제하기 전,\r\n일시불인지 무이자 결제인지\r\n꼭! 확인해 주세요!");
+		});
+	
+	/* 개인정보 항목 모두 동의하기 */
+		$('#agree_type-checkbox').on("click",function(){
+			if($(this).hasClass('checked') == false){
+				$('input[name=simple_agree]').prop("checked",true);
+				$('.payment_info .type-checkbox.pay').addClass('checked');
+			}else{
+				$('input[name=simple_agree]').prop("checked",false);
+				$('.payment_info .type-checkbox.pay').removeClass('checked');
+			}
+		});
+	
+	/* 수강관리 알람 수신 동의 */
+		$("input[name='agree_check_alarm']").on("click",function(){			
+			var aflag;
+			var oid = $("#oid").val();
+			if($('input:checkbox[name="agree_check_alarm"]').is(":checked") == false){
+				aflag = "N";
+			}else{
+				aflag = "Y";
+			}
+			$.ajax({url:"/?s=payment&a=member_lesson_alarm",
+				type:"POST",
+				dataType: "json",
+				data:{ mode: "alarm", aflag: aflag, oid: oid, site: "m" },
+				async:false,
+				success : function(data){
+					if(data.result == "S"){
+
+						if($('input:checkbox[name="agree_check_alarm"]').is(":checked") == false){
+							$('input:checkbox[name="agree_check_alarm"]').prop("checked", true); 
+						}else{
+							$('input:checkbox[name="agree_check_alarm"]').prop("checked", false); 
+						}
+						$('input:checkbox[name="agree_check_alarm"]').attr("disabled",true);				
+					}
+					alert(data.message);
+				}
+			});
+		});
+});
+</script>
+
+<div id="siwon_container" class="payment_section">
+	<div class="payment_info">
+		<h3 class="tit_info">주문상품 <span class="view">1건</span><i class="arw">&nbsp;</i></h3>
+		<div class="info_cont">
+			<ul class="order_list li_st1">
+				<li>
+					<span class="subject">[프로모션] [신규]기적의영어탈출기끝장팩_60일연장<span class="num_box">425일</span></span>
+					<span class="price_info">299,000원</span>
+				</li>
+			</ul>
+		</div>
+	</div><!-- // 주문 상품 -->
+
+	<?php // 휴대폰 본인 미인증 시 노출  ?>
+	<div class="payment_info">
+		<h3 class="tit_info">본인인증<i class="arw">&nbsp;</i></h3>
+		<div class="info_cont">
+			<ul class="dl_st">
+				<li>
+					<dl>
+						<dt>휴대폰</dt>
+						<dd class="phone">
+							<select name="cert_phone1" id="cert_phone1" class="select_comm">
+								<option>010</option>
+								<option>011</option>
+								<option>016</option>
+								<option>017</option>
+								<option>018</option>
+								<option>019</option>
+							</select><span class="dash">-</span><input type="text" name="cert_phone2" id="cert_phone2" class="input_comm" maxlength="4" value=""><span class="dash">-</span><input type="text" name="cert_phone3" id="cert_phone3" class="input_comm" maxlength="4" value="">
+							<a href="javascript:void(0)" class="bt_st3 p100 mt5" id="phone_cert_send">인증번호받기</a>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>인증번호</dt>
+						<dd class="chk_num"><input type="number" id="cert_num" name="cert_num" placeholder="인증번호를 입력해주세요" class="input_comm" maxlength="6"><a href="javascript:void(0)" class="bt_st1" id="phone_cert_chk_send">확인</a></dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
+	</div><!-- // 본인 인증 -->
+	
+	<div class="payment_info">
+		<h3 class="tit_info">구매자 정보<span class="view">김땡땡(010-1234-1234)</span><i class="arw">&nbsp;</i></h3>
+		<div class="info_cont">
+			<ul class="buyer_info li_st2">
+				<li>
+					<span class="th">이름</span>
+					<span class="td">김땡땡</span>
+				</li>
+				<li>
+					<span class="th">휴대폰</span>
+					<span class="td">010-1234-1234</span>
+				</li>
+				<li>
+					<span class="th">이메일</span>
+					<span class="td">ddangddan@nate.com</span>
+				</li>
+			</ul>
+		</div>
+	</div><!-- // 구매자 정보 -->
+
+	<div class="payment_info">
+		<h3 class="tit_info">배송지 정보<i class="arw">&nbsp;</i></h3>
+		<div class="info_cont">
+			<ul class="select_adds">
+				<li><input type="radio" id="_adds1" name="delivery_info" class="radio_comm" value="1"><label for="_adds1" class="type-radio checked">기본 배송지</label></li>
+				<li><input type="radio" id="_adds2" name="delivery_info" class="radio_comm" value="0"><label for="_adds2" class="type-radio">신규 배송지</label></li>
+			</ul>
+			<ul class="adds_list dl_st">
+				<li>
+					<dl>
+						<dt>이름</dt>
+						<dd class="name"><input type="text" name="uname" id="uname" class="input_comm" placeholder="이름을 입력해주세요."></dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>휴대폰</dt>
+						<dd class="phone">
+							<select name="phone1" id="phone1" class="select_comm">
+								<option value="010" selected="">010</option>
+								<option value="011">011</option>
+								<option value="011">016</option>
+								<option value="011">017</option>
+								<option value="011">018</option>
+								<option value="011">019</option>
+							</select><span class="dash">-</span><input type="number" name="phone2" id="phone2" class="input_comm"><span class="dash">-</span><input type="number" name="phone3" id="phone3" class="input_comm">
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>배송지</dt>
+						<dd class="zipcode">
+							<p><input type="text" name="postnum" id="postnum" class="input_comm"><a href="javascript:void(0)" onclick="zipcode.GoDaumZipSearch();" id="zip_page" class="bt_st3">주소검색</a></p>
+							<p><input type="text" name="address" id="address" class="input_comm"></p>
+							<p><input type="text" name="address_detail" id="address_detail" class="input_comm" placeholder="상세주소를 입력해주세요."></p>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>배송메모</dt>
+						<dd class="memo"><textarea class="textarea_comm" name="besong_msg" id="besong_msg" placeholder="배송메모를 입력해 주세요."></textarea>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
+	</div><!--// 구매자 정보 -->
+
+	<div class="payment_info">
+		<h3 class="tit_info">추가 할인</h3>
+		<div class="info_cont">
+			<ul class="add_sale">
+				<li>
+					<span class="subject">[신규]기적의영어탈출기끝장팩_60일연장</span>
+					<span class="sale_info"><span class="price">399,000원</span><a href="javascript:void(0)" onclick="layerPopId('layer_coupon','fixed')" class="bt_st3">쿠폰 적용</a></span>
+				</li>
+			</ul>
+		</div>
+	</div><!-- // 추가 할인 -->
+
+	<div class="payment_info total_info">
+		<h3 class="tit_info">최종 결제금액<span class="view" id="total_trade_price_view">299,000원</span><i class="arw">&nbsp;</i></h3>
+		<div class="info_cont">
+			<ul class="total_pay">
+				<li>
+					<span class="th">주문금액</span><span class="td"><strong>299,000원</strong></span>
+				</li>
+				<li>
+					<span class="th">배송비</span><span class="td"><strong class="plus">+2,500원</strong></span>
+				</li>
+				<li>
+					<span class="th">배송비할인</span><span class="td"><strong class="minus">-2,500원</strong></span>
+				</li>
+				<li>
+					<span class="th">추가할인</span><span class="td" id="add_discount"><strong class="minus">-0원</strong></span>
+				</li>
+				<li class="total_sale">
+					<span class="th">총 할인금액</span><span class="td" id="tot_discount"><strong>-2,500원</strong></span>
+				</li>
+			</ul>
+			<div class="total">
+				<span class="th">총 결제금액</span>
+				<span class="td pay"><strong id="total_trade_price">299,000원</strong></span>
+			</div>
+		</div>
+	</div><!-- // 최종 결제금액 -->
+
+	<div class="payment_info">
+		<h3 class="tit_info">결제 정보<i class="arw">&nbsp;</i></h3>
+		<div class="info_cont">
+			<ul class="pay_select">
+				<li class="checked">
+					<input type="radio" name="method" id="pay_c1" class="id_check" value="wcard"><label for="pay_c1">신용카드</label>
+				</li>
+				<li>
+					<input type="radio" name="method" id="pay_c2" class="id_check" value="vbank"><label for="pay_c2">휴대폰 결제</label>
+				</li>
+				<li>
+					<input type="radio" name="method" id="pay_c3" class="id_check" value="vbank"><label for="pay_c3">무통장입금</label>
+				</li>
+				<li>
+					<input type="radio" name="method" id="pay_c4" class="id_check" value="vbank"><label for="pay_c4">실시간 계좌이체</label>
+				</li>
+				<li>
+					<input type="radio" name="method" id="pay_c5" class="id_check" value="vbank"><label for="pay_c5">네이버페이</label>
+				</li>
+				<li>
+					<input type="radio" name="method" id="pay_c6" class="id_check" value="vbank"><label for="pay_c6">카카오페이</label>
+				</li>
+			</ul>
+
+			<!-- 결제 정보 안내 영역 -->
+			<div id="pay_c1" class="pay_noti" style="display:block">
+				<strong class="noti_tit">신용카드 무이자 할부 안내</strong>
+				<p class="card_txt"><?=$card_txt?></p>
+				<p class="card_img">
+					<img src="<?=$card_src?>" alt="무이자 할부 가능 카드사">
+				</p>
+			</div>
+			<div id="pay_c2" class="pay_noti">
+				<strong class="noti_tit">휴대폰 결제 안내</strong>
+				통신사(SKT/KT/LG U+) 월 누적 결제 금액 최대 50만원까지 결제가 가능합니다.
+				<br>단, 회원 별 결제한도는 각 통신사별 이용제한에 따라 적용 됩니다.
+			</div>
+			<div id="pay_c3" class="pay_noti">
+				<strong class="noti_tit">무통장 입금 안내</strong>
+				· 입금 시 주문자 이름과 상관없이 금액만 일치하면 정상 입금처리 됩니다.<br>
+				· 반드시 입금 기한 내에 정확한 결제 금액을 입금해 주세요<br>
+				· 입금 기한이 지나면 주문은 자동취소 되므로 다시 주문해주세요.<br>
+				· 자동화 기기에서는 카드를 통해 이체해 주시기 바랍니다. (일부 기기에서는 현금, 통장 이체 제한됨)<br>
+				· 매진, 판매 종료로 인해 주문취소가 될 수 있으며 취소 시 안내문자가 발송 됩니다.<br>
+				· 무통장입금 결제를 취소하실 경우 전체 취소 후 다시 주문해 주세요.<br>
+				· 해외은행 계좌에서 입금시에는 반드시 원화로 입금해 주세요.<br>
+				· 해외은행 계좌로의 무통장 환불은 불가능합니다.
+			</div>
+			<div id="pay_c4" class="pay_noti">
+				<strong class="noti_tit">실시간 계좌이체 안내</strong>
+				· 실시간 계좌이체 1일 이체한도는 200만원입니다.<br>
+				· 실시간 계좌이체 이용시 인터넷 공인인증서가 필요합니다.
+			</div>
+			<div id="pay_c5" class="pay_noti">
+				<strong class="noti_tit">네이버페이 안내</strong>
+				· 주문 변경 시 카드사 혜택 및 할부 적용 여부는 해당 카드사 정책에 따라 변경될 수 있습니다.<br>
+				· 네이버페이는 네이버ID로 별도 앱 설치 없이 신용카드 또는 은행계좌 정보를 등록하여 네이버페이 비밀번호로 결제할 수 있는 간편결제 서비스입니다.<br>
+				· 결제 가능한 신용카드 : 신한, 삼성, 현대, BC, 국민, 하나, 롯데, NH농협, 씨티<br>
+				· 결제 가능한 은행: NH농협, 국민, 신한, 우리, 기업, SC제일, 부산, 경남, 수협, 우체국, 미래에셋대우, 광주, 대구, 전북, 새마을금고, 제주은행, 신협, 하나은행<br>
+				· 네이버페이 카드 간편결제는 네이버페이에서 제공하는 카드사 별 무이자, 청구할인 혜택을 받을 수 있습니다
+			</div>
+			<div id="pay_c6" class="pay_noti">
+				<strong class="noti_tit">카카오페이 안내</strong>
+				· 카카오톡에서 신용/체크카드 연결하고, 결제도 지문으로 쉽고 편리하게 이용하세요!<br>
+				· 본인명의 스마트폰에서 본인명의 카드 등록 후 사용 가능(카드등록 : 카카오톡 > 더보기 > 카카오페이 > 카드)<br>
+				· 30만원 이상 결제, ARS 추가 인증 필요 <br>
+				· 이용가능 카드사 : 모든 국내 신용/체크카드 <br>
+				· 카카오페이는 무이자할부 및 제휴카드 혜택 내용과 관계가 없으며, 자세한 사항은 카카오페이 공지사항에서 확인하실 수 있습니다
+			</div>
+		</div>
+	</div><!-- // 결제 정보 -->
+
+	<div class="payment_info wrap_agree">
+		<a class="bt_more" href="javascript:void(0)"></a>
+		<h3 class="tit_info" data-state="fold">
+			<strong>(필수)</strong> 구매동의 및 결제대행 서비스 이용약관에 모두 동의하십니까?
+			<span class="agree_all">
+				<input type="checkbox" id="agree_wrap" name="" class="check_comm"><label for="agree_wrap" id="agree_type-checkbox">모두 동의합니다.</label><i class="arw">&nbsp;</i>
+			</span>
+		</h3>
+		<div class="info_cont">			
+			<dl class="agree_all_cont">
+				<dt>
+					<input type="checkbox" id="agree1" name="simple_agree" class="check_comm"><label for="agree1">(필수) 주문내역 확인 동의</label>
+				</dt>
+				<dd>
+					주문할 상품의 상품명, 상품가격, 배송정보를 확인하였으며, 구매에 동의하시겠습니까? (전자상거래법 제 8조 2항)
+				</dd>
+				<dt>
+					<input type="checkbox" id="agree2" name="simple_agree" class="check_comm"><label for="agree2">(필수) 개인정보 활용 동의</label>
+				</dt>
+				<dd>
+					<div class="agree_desc">
+						<?php require_once "/home/siwonschool/common/module/payment/payment_policy_m.html"; ?>
+					</div><!--// agree_desc -->
+				</dd>
+				<dt>
+					<input type="checkbox" id="agree3" name="simple_agree" class="check_comm"><label for="agree3">(필수) 결제 대행서비스 이용약관 동의</label>		
+				</dt>
+				<dd>
+					<ul class="agree_list">
+						<li>전자금융거래 이용약관 동의<a href="javascript:void(0)" onclick="javascript:window.open('https://plugin.inicis.com/html60/main/01_Information.html','','top=100,left=100,width=500,height=600,menubar=0,resizable=0,scrollbars=0,status=0,titlebar=0,toolbar=0');">전체보기</a></li>
+						<li>고유식별정보 수집 및 이용약관 동의<a href="javascript:void(0)" onclick="javascript:window.open('https://plugin.inicis.com/html60/main/02_Information.html','','top=100,left=100,width=500,height=600,menubar=0,resizable=0,scrollbars=0,status=0,titlebar=0,toolbar=0');">전체보기</a></li>
+						<li>개인정보의 수집 및 이용약관 동의<a href="javascript:void(0)" onclick="javascript:window.open('https://plugin.inicis.com/html60/main/03_Information.html','','top=100,left=100,width=500,height=600,menubar=0,resizable=0,scrollbars=0,status=0,titlebar=0,toolbar=0');">전체보기</a></li>
+						<li class="last">개인정보 제공 및 위탁안내 동의<a href="javascript:void(0)" onclick="javascript:window.open('https://plugin.inicis.com/html60/main/04_Information.html','','top=100,left=100,width=500,height=600,menubar=0,resizable=0,scrollbars=0,status=0,titlebar=0,toolbar=0');">전체보기</a></li>
+					</ul>
+				</dd>
+			</dl>
+		</div><!-- // info_cont -->
+	</div><!-- // 구매동의 및 결제대행 서비스 이용약관 -->
+	
+	 <div class="payment_info study_alaram">
+		<a class="bt_more" href="javascript:void(0)"></a>
+		<h3 class="tit_info">
+			<input type="checkbox" id="agree_check_alarm" name="agree_check_alarm" class="check_comm">
+			<label for="agree_check_alarm"><strong>(선택)</strong> 수강기간 내 수강관리 알람 수신 동의</label>
+		</h3>
+	</div><!-- // 수강관리 알람 -->
+
+	<div class="inner pb100">
+		<a href="javascript:void(0)" onclick="trade_go();" class="bt_em50_black full">결제하기</a>
+	</div>
+</div><!-- // siwon_container -->
+
+<!-- 레이어 팝업: 쿠폰 -->
+<div class="wrap_layer_popup" id="layer_coupon">
+	<div class="inner_popup">		
+		<h3 class="pop_tit">쿠폰적용</h3>
+		<button type="button" onclick="layerPopClose()" class="bt_close">닫기</button>
+		<div class="pop_cont">
+			<div class="input_area flex">
+				<input type="text" class="input_comm" placeholder="(-)없이 쿠폰번호를 입력해주세요."><button class="bt_save">등록</button>
+			</div>
+			<ul class="coupon_list">
+				<li>
+					<!-- [D] 쿠폰 사용 가능한 경우 data-state="can", 불가 시 data-state="cannot", 사용 완료 시 data-state="used" -->
+					<button type="button" class="bt_coupon" data-state="can">
+						<span class="tit"><em>[14일 무료체험권]</em> 스마트+클래식+for 중년</span>
+						<span class="per">100% 할인</span>
+						<span class="period">2019-07-01 ~ 2019-07-22</span>
+					</button>
+				</li>
+				<li>
+					<button type="button" class="bt_coupon" data-state="cannot">
+						<span class="tit"><em>[14일 무료체험권]</em> 스마트+클래식+for 중년</span>
+						<span class="per">100% 할인</span>
+						<span class="period">2019-07-01 ~ 2019-07-22</span>
+					</button>
+				</li>
+				<li>
+					<button type="button" class="bt_coupon" data-state="used">
+						<span class="tit"><em>[14일 무료체험권]</em> 스마트+클래식+for 중년</span>
+						<span class="per">100% 할인</span>
+						<span class="period">2019-07-01 ~ 2019-07-22</span>
+					</button>
+				</li>
+				<!-- [D] 쿠폰 없을 시 노출 
+				<li class="no_coupon">
+					사용 가능한 쿠폰이 없습니다.
+				</li>-->
+			</ul>
+		</div>
+	</div><!-- // inner_popup -->
+</div><!-- // 레이어 팝업: 쿠폰 -->
+
+<?php require_once 'footer.html'; ?>

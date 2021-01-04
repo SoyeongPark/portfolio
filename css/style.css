@@ -76,6 +76,7 @@ article{position:relative;min-height:100vh;padding:100px 15vw}
 .portfolio .list li .desc.b:before{top:-10px;bottom:initial;transform:rotate(135deg)}
 .portfolio .list li .desc .tit{white-space:nowrap;font-size:1.2em;font-weight:500;color:inherit}
 .portfolio .list li .desc .sub_tit{display:inline-block;padding-top:.5em}
+.portfolio .list li .desc .note{color:#01d59b}
 .portfolio .list li .desc a{color:#01d59b}
 .portfolio .list li .desc a:hover{text-decoration:underline}
 
@@ -115,3 +116,23 @@ article{position:relative;min-height:100vh;padding:100px 15vw}
 .layerpop .note::before{content:'※ '}
 .layerpop .note{padding-top:.5em;font-size:16px;color:#fff;text-align:center}
 .layerpop .sl_vertical .note{margin-top:-2em;z-index:1;position:relative;background:#222;padding-bottom:.5em}
+
+
+/* site */
+.site{display:flex;justify-content:space-between;align-items:center;width:750px;margin:0 auto;padding:0 !important}
+
+.site .cont .head{padding-bottom:.5em;font-weight:bold;color:#01d59b}
+.site .cont .info{margin-bottom:70px}
+.site .cont .list{vertical-align:middle}
+.site .cont .list li{text-align:right}
+.site .cont .list a{display:inline-block;position:relative}
+.site .cont .list a::after{position:absolute;top:0;left:100%;content:'>';opacity:0;transition:.5s}
+.site .cont .list a:hover{color:#01d59b}
+.site .cont .list a:hover::after{opacity:1;transform:translateX(10px)}
+
+.site .view{display:inline-block;position:relative;width:378px;height:786px;padding:30px 5px;vertical-align:middle}
+.site .view::before{content:'';display:inline-block;width:100%;height:100%;position:absolute;top:0;left:0;background:url(../img/phone_frame.png) center center no-repeat;background-size:cover;pointer-events:none}
+.site .view::after{content:'';display:block;width:20px;height:100%;position:absolute;top:0;left:100%;background:#111}
+.site .view .frame{width:calc(100% + 20px);height:100%;margin:0;padding:0;border-radius:27px;background:#fff}
+.site .view .link_new{margin-top:50px;text-align:center}
+.site .view .link_new a:hover{color:#01d59b}

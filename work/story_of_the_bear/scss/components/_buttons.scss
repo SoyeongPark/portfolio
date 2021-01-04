@@ -1,0 +1,83 @@
+$sizes: 24, 25, 30, 36, 40, 50;
+$colors: ('main' : $mainColor, 'navy': '#0759e7', 'gray': '#666', 'gray2': '#444', 'darkgray': '#858585', 'red': '#ed3338', 'black': '#111', 'blue': '#333cb3', 'white': '#fff');
+
+.bt_h_comm {
+	display: inline-block;
+	color: #fff;
+	text-align: center;
+	vertical-align: middle;
+
+	&:hover {
+		color: #fff;
+		text-decoration: none;
+	}
+}
+.bt_em_comm {
+	display: inline-block;
+	text-align: center;
+	background-color: #fff;
+	vertical-align: middle;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+@each $size in $sizes {
+
+	@each $color, $hash in $colors {
+		.bt_h#{$size}_#{$color} {
+			@extend .bt_h_comm;
+
+			height: #{$size}px;
+			@if $size == 36 {
+				font-size: 13px;
+			} @else if $size == 40 {
+				font-size: 15px;
+			} @else if $size == 50 {
+				font-size: 16px;
+			} @else {
+				font-size: 12px;
+			}
+			line-height: #{$size - 2}px;
+			background-color: #{$hash};
+			border: 1px solid #{$hash};
+		}
+
+		.bt_em#{$size}_#{$color} {
+			@extend .bt_em_comm;
+
+			height: #{$size}px;
+			color: #{$hash};
+			@if $size == 36 {
+				font-size: 13px;
+			} @else if $size == 40 {
+				font-size: 15px;
+			} @else if $size == 50 {
+				font-size: 16px;
+			} @else {
+				font-size: 12px;
+			}
+			line-height: #{$size - 2}px;
+			border: 1px solid #{$hash};
+
+			&:hover {
+				color: #{$hash};
+			}
+		}
+	}
+}
+
+.bt_more_comm {
+	display: inline-block;
+	width: 65px;
+	height: 22px;
+	background: #fff;
+	border: 1px solid #dbdbdb;
+	font-size: 12px;
+	font-weight: normal !important;
+	color: #929292 !important;
+	text-align: center;
+	line-height: 20px;
+	text-decoration: none !important;
+}

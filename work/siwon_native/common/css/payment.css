@@ -1,0 +1,108 @@
+/* 결제 페이지 */
+.payment_section{padding-bottom:8vw;background:#f6f5fa}
+.payment_info .li_st1 li{position:relative;border-top:1px solid #eee}
+.payment_info .li_st1 li:first-child{border-top:0}
+.payment_info .li_st1 li .subject{display:block;padding-right:70px}
+.payment_info .li_st1 li .num_box{display:block;margin-top:2px;font-size:11px;color:#999}
+.payment_info .li_st1 li .price_info{position:absolute;top:50%;right:0;font-weight:bold;color:#e85350;transform:translateY(-50%)}
+.payment_info .li_st2 li{overflow:hidden;position:relative}
+.payment_info .li_st2 li .th{display:block;position:absolute;left:0;width:80px}
+.payment_info .li_st2 li .td{display:block;margin-left:80px;color:#666}
+.payment_info .dl_st dl{position:relative}
+.payment_info .dl_st dt{position:absolute;top:0;left:0;width:76px;font-size:12px;line-height:26px}
+.payment_info .dl_st dd{padding-left:5em}
+.payment_info .dl_st .bt_st1, .payment_info .dl_st .bt_st3{width:6em}
+.payment_info input, .payment_info select, .payment_info textarea{color:#666}
+.payment_info .tit_info{position:relative;padding:12px;border-bottom:1px solid #209fac;background:#fff;font-size:13px;font-weight:bold}
+.payment_info .tit_info .arw{display:block;overflow:hidden;position:absolute;top:50%;right:0;width:40px;height:40px;margin-top:-20px;background:url(https://siwon-cdn.siwonschool.com/native/m/comm/ico_bt_arw.png) no-repeat center center;background-size:16px auto;transform:rotate(180deg)}
+.payment_info .tit_info .view{display:none;position:absolute;top:50%;right:40px;color:#e85350;font-size:13px;font-weight:normal;transform:translateY(-50%)}
+.payment_info .tit_info[data-state='fold'] .arw{transform:rotate(0)}
+.payment_info .info_cont{padding:15px 12px}
+.payment_info ul li, 
+.finish_info ul li{padding:3px 0;font-size:12px;line-height:1.6}
+.payment_info .info_cont dl .phone{display:flex}
+.payment_info .info_cont dl .phone input, .payment_info .info_cont dl .phone select{width:31%}
+.payment_info .info_cont dl .phone .dash{margin:0 .5em;line-height:26px}
+.payment_info .info_cont .chk_num{display:flex}
+.payment_info .info_cont .chk_num input{flex:1}
+.payment_info .select_adds{overflow:hidden;padding-bottom:5px}
+.payment_info .select_adds li{float:left;margin-right:25px}
+.payment_info .adds_list dl .zipcode p:first-child input, .payment_info .adds_list dl .zipcode p:first-child a{width:34%}
+.payment_info .adds_list dl .zipcode p:first-child a{width:31%;margin-left:5px}
+.payment_info .adds_list dl .zipcode p + p{margin-top:5px}
+.payment_info .adds_list dl .zipcode p + p input{width:100%}
+.payment_info .adds_list .textarea_comm{width:100%}
+.payment_info .add_sale li{position:relative;border-bottom:1px solid #eee}
+.payment_info .add_sale li:last-child{border-bottom:0}
+.payment_info .add_sale li .subject{display:block;padding-right:150px}
+.payment_info .add_sale li .sale_info{position:absolute;top:50%;right:0;transform:translateY(-50%)}
+.payment_info .add_sale li .price{display:inline-block;margin-right:10px;color:#209fac;line-height:30px;vertical-align:middle}
+.payment_info .add_sale li .sale_info .bt_st3{width:70px;height:30px;line-height:28px}
+.payment_info.total_info .th{display:inline-block;float:left;width:80px}
+.payment_info.total_info .td{float:right}
+.payment_info .total_pay li{overflow:hidden;color:#666}
+.payment_info .total_pay li .plus{color:#209fac}
+.payment_info .total_pay li .minus{color:#e85350}
+.payment_info .total_pay .total_sale{margin-top:5px;padding:12px 0;border-top:1px solid #ccc}
+.payment_info .total{overflow:hidden;padding:12px 0;border-top:1px solid #222;font-weight:bold;font-size:14px}
+.payment_info .total .pay{color:#e85350}
+.payment_info .pay_select{display:flex;flex-wrap:wrap;justify-content:space-between}
+.payment_info .pay_select li{width:calc(33% - 4px);margin-bottom:4px}
+.payment_info .pay_select li input{position:absolute;opacity:0}
+.payment_info .pay_select li label{display:block;width:100%;height:40px;background:#6e6e6e;font-size:12px;color:#fff;line-height:38px;text-align:center}
+.payment_info .pay_select li.checked label{background:#209fac}
+.payment_info .pay_noti{display:none;margin-top:6px}
+.payment_info .pay_noti, .payment_info .pay_noti p{font-size:12px;line-height:1.6}
+.payment_info .pay_noti, .payment_info .pay_noti p img{width:100%}
+.payment_info .pay_noti .noti_tit, .payment_info .pay_exp .noti_tit{display:block;padding-bottom:5px;font-size:12px;line-height:1.6}
+.payment_info .info_list li{position:relative;margin-top:2px;padding:0 0 0 10px;font-size:12px;line-height:1.6}
+.payment_info .info_list li:first-child{margin-top:0}
+.payment_info .info_list li:before{position:absolute;top:9px;left:0;width:2px;height:2px;border-radius:1px;background:#1f1f1f;content:''}
+.payment_info.wrap_agree .tit_info, .payment_info.study_alaram .tit_info{border:none}
+.payment_info.wrap_agree .tit_info label, .payment_info.study_alaram .tit_info label{font-size:13px}
+.payment_info.wrap_agree .info_cont{display:none}
+.payment_info .agree_all{display:block;position:relative;margin-top:12px;padding-top:12px;border-top:1px solid #ddd}
+.payment_info .agree_all .arw{margin-top:-14px}
+.payment_info .agree_all_cont dt label{font-weight:bold;font-size:13px}
+.payment_info .agree_all_cont dd{padding:12px 0;font-size:12px;line-height:1.6}
+.payment_info .agree_all_cont dd > ul{padding-left:10px}
+.payment_info .agree_all_cont dd > ul li{position:relative;padding:0}
+.payment_info .agree_all_cont dd > ul li:before{position:absolute;top:9px;left:-10px;border:1px solid #222;content:''}
+.payment_info .agree_all_cont .agree_desc{overflow-y:auto;height:100px;padding:10px;border:1px solid #ccc;box-sizing:border-box}
+.payment_info .agree_all_cont .agree_list li + li{margin-top:2px}
+.payment_info .agree_all_cont .agree_list a{margin-left:5px;padding:0 2px;border:1px solid #666;border-radius:4px}
+.payment_info.study_alaram .tit_info{background:none}
+.bt_st3, .bt_st1{display:inline-block;height:26px;padding:0 .3em;margin-left:5px;background:#6e6e6e;color:#fff;line-height:26px;text-align:center;vertical-align:middle;box-sizing:border-box} 
+/* 레이어 팝업:쿠폰 */
+#layer_coupon{top:0 !important}
+#layer_coupon .inner_popup{height:100vh;background:#fff}
+#layer_coupon .input_area{display:flex;padding:10px 0}
+#layer_coupon .input_area .input_comm{flex:1;height:50px;line-height:48px}
+#layer_coupon .input_area .bt_save{width:20%;height:50px;color:#fff;background:#333}
+#layer_coupon .coupon_list{position:relative;margin-top:4.5vw}
+#layer_coupon .coupon_list li + li{margin-top:5px}
+#layer_coupon .coupon_list .bt_coupon{overflow:hidden;position:relative;width:100%;padding:10px 20% 10px 10px;border:1px solid #766cee;text-align:left}
+#layer_coupon .coupon_list .bt_coupon[data-state="cannot"],
+#layer_coupon .coupon_list .bt_coupon[data-state="used"]{border-color:#909090;color:#909090}
+#layer_coupon .coupon_list .bt_coupon::after{display:inline-block;position:absolute;top:50%;right:0;width:20%;padding:50% 0;color:#fff;text-align:center;transform:translateY(-50%)}
+#layer_coupon .coupon_list .bt_coupon[data-state="can"]::after{content:'사용하기';background:#766cee}
+#layer_coupon .coupon_list .bt_coupon[data-state="cannot"]::after{content:'사용불가';background:#909090}
+#layer_coupon .coupon_list .bt_coupon[data-state="used"]::after{content:'사용완료';background:#909090}
+#layer_coupon .coupon_list .bt_coupon em{font-weight:700}
+#layer_coupon .coupon_list .bt_coupon .per{display:block}
+#layer_coupon .coupon_list .no_coupon{padding:40px 12px;text-align:center}
+
+
+/* 수강신청 완료 */
+.finish_info{padding:18px 12px;text-align:center}
+.finish_info .tit_finish{padding-bottom:10px;font-size:14px;font-weight:bold}
+.finish_info .finish_desc .number_box{font-size:12px;color:#e85350;line-height:1.6}
+.finish_info .finish_desc .number{display:block;color:#666}
+.finish_info .finish_desc .info_list{margin-top:15px;padding:12px 18px;border:1px solid #dcdcdc;background:#fff}
+.finish_info .finish_desc .li_st2 li{text-align:left}
+.finish_info .finish_desc .li_st2 li .td{color:#209fac}
+.payment_info .add_sale.li_st1 li .subject{padding-right:70px}
+.payment_info .add_sale.li_st1 li .price{color:#666}
+.payment_section .payment_btm{display:flex;padding:20px 4.5vw;background:#fff}
+.payment_section .payment_btm a{flex:1}
+.payment_section .payment_btm a + a{margin-left:12px}

@@ -1,0 +1,143 @@
+/* bbs css */
+.bbs_area{position:relative}
+
+/* 내강의실 */
+.bbs_area .bbs_list3{overflow:hidden}
+.bbs_area .bbs_list3 li{position:relative;min-height:75px;border-bottom:1px solid #f7f7f7}
+.bbs_area .bbs_list3 .lec_info .subject{display:block;font-size:15px;font-weight:bold;line-height:1.2}
+.bbs_area .bbs_list3 .lec_info .info{margin-top:4px;font-size:13px;color:#666}
+.bbs_area .bbs_list3 .lec_info .date{margin-top:10px;font-size:13px;color:#999}
+.bbs_area .bbs_list3.thumb_type{margin-top:12px;border-top:1px solid #f7f7f7}
+.bbs_area .bbs_list3.thumb_type .lec_info{padding:16px 20px 16px 80px}
+.bbs_area .bbs_list3.thumb_type .thumb{display:block;overflow:hidden;position:absolute;top:10px;left:0;width:70px;height:70px;border-radius:35px}
+.bbs_area .bbs_list3.thumb_type .thumb img{width:100%;height:auto}
+.bbs_area .bbs_list3.thumb_type .prog{display:inline-block;position:absolute;bottom:16px;right:16px;width:56px;height:16px;background:#fe2830;border-radius:20px;font-size:13px;font-weight:bold;color:#fff;line-height:16px;text-align:center}
+.bbs_area .bbs_list3.thumb_type i.arw{display:inline-block;position:absolute;bottom:17px;right:0;width:14px;height:14px;background:url(https://img.siwonschool.com/korean/m/ko/comm/arw_r3.png) no-repeat;background-size:14px auto}
+/* 내강의실 - 상세 */
+.bbs_area .bbs_list3.thumb_type.detail li .prog{top:50%;margin-top:-14px}
+.bbs_area .bbs_list3.thumb_type.detail .thumb{width:55px;height:55px;border-radius:55px;background:#fe2830;color:#fff;line-height:55px;text-align:center}
+.bbs_area .bbs_list3.thumb_type.detail .lec_info{padding:20px 20px 16px 65px}
+.bbs_area .bbs_list3.thumb_type.detail .lec_info .subject{padding-right:60px}
+.bbs_area .bbs_list3.thumb_type.detail .lec_info .info{padding-right:60px}
+.bbs_area .bbs_list3.thumb_type li.ot .lec_info .subject{color:#666}
+.bbs_area .bbs_list3.thumb_type li.ot .info{color:#999}
+.bbs_area .bbs_list3.thumb_type.detail li.ot .prog{background:#999}
+.bbs_area .bbs_list3.thumb_type.detail li.ot .thumb{background:#999}
+
+/* 수강신청 - 상세 _강좌 설명 */
+.bbs_area .bbs_list4 > li{overflow:hidden;position:relative;margin-bottom:7px;padding:12px;background:#fff}
+.bbs_area .bbs_list4 li dt{line-height:1.2}
+.bbs_area .bbs_list4 li .subject{display:block;padding-right:120px;font-size:15px;font-weight:bold}
+.bbs_area .bbs_list4 li .tit{color:#000;font-size:14px;font-weight:bold}
+.bbs_area .bbs_list4 li .info{margin-top:4px;color:#666;font-size:12px;line-height:1.4}
+.bbs_area .bbs_list4 li .price{margin-top:4px;font-size:12px}
+.bbs_area .bbs_list4 li .price .disc{margin-left:5px;font-size:12px;color:#999;text-align:center}
+.bbs_area .bbs_list4 li .price .sale_price{margin-left:10px;font-size:14px;font-weight:bold}
+.bbs_area .bbs_list4 li .sale{font-size:17px;color:#fe2830}
+
+/* 마이페이지 - 결제내역, 주문배송 */
+.bbs_area .bbs_list5{overflow:hidden;margin-bottom:10px}
+.bbs_area .bbs_list5 .list_info{position:relative;padding:10px;border-bottom:1px solid #ddd;background:#fff}
+.bbs_area .bbs_list5 .list_info .date{display:block;padding-bottom:8px;border-bottom:1px solid #ddd;background:url(https://img.siwonschool.com/korean/m/ko/comm/arw_r2.png) no-repeat right top;background-size:12px auto;font-size:12px;color:#666}
+.bbs_area .bbs_list5 .list_info .cate{color:#2784c5;font-size:11px}/*?*/
+.bbs_area .bbs_list5 .list_info .subject{padding:8px 80px 0 0;font-size:13px;font-weight:bold}
+.bbs_area .bbs_list5 .list_info .price{position:absolute;top:39px;right:10px;font-size:12px;font-weight:normal}
+.bbs_area .bbs_list5 .list_info .price strong{font-size:13px}
+.bbs_area .bbs_list5 .txt{color:#fe2830;font-size:12px}
+.bbs_area .bbs_list5 .download{position:absolute;right:10px;top:20px;width:60px}
+
+/* 수강신청 - 도서 상세_강좌 설명 */
+.bbs_area .bbs_list6 li{overflow:hidden;margin-bottom:7px;padding:12px;background:#fff}
+.bbs_area .bbs_list6 li dt{line-height:1.2}
+.bbs_area .bbs_list6 li .subject{display:block;font-size:15px;font-weight:bold}
+.bbs_area .bbs_list6 li .desc{margin-top:4px;font-size:15px}
+.bbs_area .bbs_list6 li .info{margin-top:4px;color:#666;font-size:12px;line-height:1.4}
+.bbs_area .bbs_list6 li .info span{padding:0 10px;border-left:1px solid #a3a3a3}
+.bbs_area .bbs_list6 li .info span:first-of-type{padding-left:0;border-left:0}
+.bbs_area .bbs_list6 li .price{margin-top:15px;text-align:right}
+.bbs_area .bbs_list6 li .price del{font-size:12px;color:#999;text-align:center}
+.bbs_area .bbs_list6 li .price .sale{display:inline-block;margin-left:5px;padding:0px 3px 1px;background:#fff;border:1px solid #f92145;font-size:12px;font-weight:bold;color:#f92145}
+.bbs_area .bbs_list6 li .price .sale_price{display:inline-block;margin-left:10px;font-size:17px;font-weight:bold;color:#fe2830}
+
+/* 게시글이 없을 때 */
+.no_bbs{padding:12px 12px 32px}
+.no_bbs .inside{padding:18px 0;text-align:center}
+.no_bbs .txt{display:block;padding-top:80px;background:url(https://img.siwonschool.com/korean/m/ko/comm/ico_nobbs.png) no-repeat center top;background-size:69px auto;font-size:13px}
+.no_bbs.cart .txt{background:url(https://img.siwonschool.com/korean/m/ko/comm/ico_nocart.png) no-repeat center top;background-size:69px auto}
+.no_bbs.payment .txt{background:url(https://img.siwonschool.com/korean/m/ko/comm/ico_nopay.png) no-repeat center top;background-size:69px auto}
+.no_bbs.order_ship .txt{background:url(https://img.siwonschool.com/korean/m/ko/comm/ico_noship.png) no-repeat center top;background-size:69px auto}
+
+/* 게시판 글쓰기 */
+.bbs_area .bbs_write .write_form dt{overflow:hidden}
+.bbs_area .bbs_write .write_form dt{margin-bottom:7px}
+.bbs_area .bbs_write .write_form dd{margin-bottom:3px}
+.bbs_area .bbs_write .write_form .textarea_st1{height:175px}
+
+/* 게시글 toggle(공통) */
+.review_post{margin-top:-1px;border:1px solid #f7f7f7;border-width:1px 0;background:#fff}
+.review_post .head{position:relative;padding:12px 0;min-height:72px;cursor:pointer}
+.review_post .head .thumb{display:block;overflow:hidden;position:absolute;top:12px;left:4px;width:72px;height:72px;border-radius:36px}
+.review_post .head .thumb img{width:100%;height:auto}
+.review_post .head .star_score{overflow:hidden;position:absolute;top:12px;left:4px;width:72px;height:72px;border-radius:36px;background:#f6f6f6;font-size:18px;font-weight:bold;color:#fe2830;text-align:center}
+.review_post .head .star_score i{display:inline-block;overflow:hidden;width:37px;height:7px;margin-top:46px;background:url(https://img.siwonschool.com/korean/m/ko/sub/img_star_score.png) no-repeat;background-size:37px auto;font-size:0;text-indent:100%}
+.review_post .head .star_score.sc1 i{background-position:0 0}
+.review_post .head .star_score.sc2 i{background-position:0 -7px}
+.review_post .head .star_score.sc3 i{background-position:0 -14px}
+.review_post .head .star_score.sc4 i{background-position:0 -21px}
+.review_post .head .star_score.sc5 i{background-position:0 -28px}
+.review_post .head .star_score em{position:absolute;top:18px;left:0;width:100%;font-weight:bold;text-align:center}
+.review_post .head .star_score.best{background:#f6f6f6 url(https://img.siwonschool.com/korean/m/ko/sub/ico_best.png) no-repeat center 16px;background-size:24px auto}
+.review_post .head .star_score.best em{display:block;overflow:hidden;left:-100%;width:0;height:0;font-size:0;text-indent:100%}
+.review_post .head .post_info{margin-left:88px;padding-right:18px}
+.review_post .head .post_info:after{display:block;overflow:hidden;position:absolute;top:50%;right:6px;width:12px;height:12px;margin-top:-6px;background:url(https://img.siwonschool.com/korean/m/ko/comm/arr_d_sp.png) no-repeat;background-size:12px auto;font-size:0;content:''}
+.review_post .head.open .post_info:after{background-position-y:-12px}
+.review_post .head .subject{margin-top:8px;min-height:40px;font-size:15px;font-weight:bold}
+.review_post .head .write_info{margin-top:15px;font-size:13px;color:#999}
+.review_post .head .write_info span{margin-left:7px;padding-left:8px;border-left:1px solid #eee}
+.review_post .head .write_info span:first-child{margin-left:0;padding-left:0;border:none}
+.review_post .head .reply{float:right;margin-left:0;padding-left:0;border:none}
+.review_post .head .reply.fin{color:#fe2830}
+.review_post .head .post_info.simple{margin-left:0;}/* 공부질문 심플 head */
+.review_post .head .post_info.simple .lec{margin-top:6px;font-size:13px;color:#fe2830;}
+.review_post .head .post_info.simple .write_info{margin-top:4px}
+.review_post .post{font-size:13px;line-height:1.4}
+.review_post .post .post_info{padding:12px 8px 0;border-top:1px solid #f7f7f7;color:#666}
+.review_post .post .post_info p{font-size:13px;color:#666}
+.review_post .post .post_info img{max-width:100%;width:auto !important;height:auto !important}
+.review_post .post .lec_cate{height:38px;margin-top:35px;padding:0 4px;border:1px solid #e0e0e0;border-radius:2px;background:#fff;font-size:15px;line-height:38px;text-align:center}
+.review_post .foot{margin-top:12px;border-bottom:1px solid #f7f7f7}
+.review_post .foot .option{overflow:hidden}
+.review_post .foot .option li{float:left;width:80px;height:30px;line-height:30px}
+.review_post .foot .option li:first-child{width:60px}
+.review_post .foot .option li:last-child{float:right;text-align:right}
+.review_post .foot .option li a{display:block;width:100%;height:100%}
+.review_post .foot .option li a span{display:inline-block;height:30px;padding-left:18px;background:url(https://img.siwonschool.com/korean/m/ko/comm/img_reply_foot.png) no-repeat;background-size:13px auto;font-size:12px;color:#111;text-align:left}
+.review_post .foot li a.like span{background-position:0 -119px}
+.review_post .foot li a.reply span{background-position:0 -36px}
+.review_post .foot li a.del span{padding-right:18px;padding-left:0;background-position:right -75px;color:#222}
+.review_post .foot li a.like.on span{background-position:0 0}
+.review_post .reply_area{padding-bottom:12px}
+.review_post .reply_area .reply_write .textarea_st1{float:left;width:78%;height:64px;border:0;background:#f2f2f2;font-size:12px;color:#999}
+.review_post .reply_area .reply_write .textarea_st1::placeholder{font-size:12px;color:#999}
+.review_post .reply_area .reply_write .write .button{float:right;width:22%;height:64px;background:#222;color:#fff;font-size:14px;text-align:center;box-sizing:border-box}
+.review_post .reply_area .reply_list{margin-top:12px;border-top:1px solid #f7f7f7}
+.review_post .reply_area .reply_info{position:relative;padding:12px 0}
+.review_post .reply_area .reply_info .thumb{display:inline-block;overflow:hidden;width:22px;height:22px;margin-right:4px;border:1px solid #ddd;border-radius:11px;vertical-align:middle}
+.review_post .reply_area .reply_info .thumb img{width:100%;height:auto}
+.review_post .reply_area .reply_info .name{font-size:13px;color:#666}
+.review_post .reply_area .reply_info .date{margin-left:4px;font-size:12px;color:#999}
+.review_post .reply_area .reply_info .btn{position:absolute;top:12px;right:8px}
+.review_post .reply_area .reply_info .btn a{display:inline-block;height:24px;padding:0 4px;background:#f7f7f7;font-size:12px;line-height:24px}
+.review_post .reply_area .cont{padding:0 4px 12px;font-size:13px;color:#666}
+.review_post .reply_area .re_box{padding-top:12px}
+.review_post .reply_area .re_box .re_count{padding-left:18px;background:url(https://img.siwonschool.com/korean/m/ko/comm/img_reply_foot2.png) no-repeat 0 -44px;background-size:13px auto;font-size:12px;color:#666;text-align:left}
+.review_post .reply_area .re_box .re_write{margin-top:12px}
+.review_post .reply_area .re_box .input_st1{float:left;width:78%;color:#999}
+.review_post .reply_area .re_box .input_st1::placeholder{color:#999}
+.review_post .reply_area .re_box .write .button{float:right;width:22%;height:32px;background:#222;color:#fff;font-size:13px;line-height:32px;box-sizing:border-box}
+.review_post .reply_area .re_box .re_list{margin-top:12px;border-top:1px solid #f7f7f7}
+.review_post .reply_area .re_box .reply_info{padding-left:14px;background:url(https://img.siwonschool.com/korean/m/ko/comm/arw_re.png) no-repeat 0 50%;background-size:9px auto}
+.review_post .post .mov_box{padding:16px 4px;border-top:1px solid #f7f7f7}/* 무료강의 */
+.review_post .post .mov_box .mov_tit{display:block;font-size:15px}
+.review_post .post .mov_box .mov_thumb{margin-top:8px}
+.review_post.rviwpost_toggle .post{display:none}

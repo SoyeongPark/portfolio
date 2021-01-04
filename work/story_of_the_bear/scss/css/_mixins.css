@@ -1,0 +1,33 @@
+/**
+ * Media Query
+ */
+/**
+ * Site common
+ */
+/**
+ * General
+ */
+/**
+ * animation
+ */
+.ani-duration-1s {
+  animation-duration: 1s !important;
+}
+
+.ani-duration-2s {
+  animation-duration: 2s !important;
+}
+
+.ani-duration-3s {
+  animation-duration: 3s !important;
+}
+
+.ani-duration-4s {
+  animation-duration: 4s !important;
+}
+
+.ani-duration-5s {
+  animation-duration: 5s !important;
+}
+
+/*# sourceMappingURL=_mixins.css.map */

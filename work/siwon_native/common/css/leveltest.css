@@ -1,0 +1,76 @@
+@charset "utf-8";
+.bt_lv{display:inline-block;height:40px;padding:0 2em;border:1px solid #fff;border-radius:3px;font-size:13px;color:#fff;line-height:38px;letter-spacing:0;text-align:center;vertical-align:middle}
+.bt_lv:hover{color:#fff}
+.bt_lv.next{position:relative;text-align:left}
+.bt_lv.next::after{content:'';display:inline-block;position:absolute;bottom:15px;right:1em;width:40px;height:8px;background:url(https://siwon-cdn.siwonschool.com/native/m/comm/arr_white.png) right bottom no-repeat;background-size:contain}
+.bt_lv.prev{position:relative;text-align:right}
+.bt_lv.prev::after{content:'';display:inline-block;position:absolute;bottom:15px;left:1em;width:40px;height:8px;background:url(https://siwon-cdn.siwonschool.com/native/m/comm/arr_white.png) right bottom no-repeat;background-size:contain;transform:scaleX(-1)}
+
+/* 레벨테스트 intro*/
+@keyframes blink-half {
+	0%, 49.99% {opacity:.4}
+	50%, 100% {opacity:1}
+}
+.intro .sec_head{display:flex;align-items:center;height:200px;background:url(https://siwon-cdn.siwonschool.com/native/m/leveltest/bg_head_left.png) left top no-repeat,url(https://siwon-cdn.siwonschool.com/native/m/leveltest/bg_head_right.png) right top no-repeat,linear-gradient(45deg, rgba(100,114,229,1) 0%,rgba(131,71,239,1) 100%);background-size:contain}
+.intro .sec_head .txt{width:100%;font-size:16px;color:#fff;text-align:center;line-height:1.4}
+.intro .sec_head .txt b{display:block;font-size:18px;padding-bottom:5px}
+.intro .sec_talk{padding:40px 4.5vw}
+.intro .sec_talk .talk{max-width:450px;margin:0 auto}
+.intro .sec_talk .talk li + li{margin-top:20px}
+.intro .sec_talk .talk li:nth-child(odd){text-align:right}
+.intro .sec_talk .talk li:nth-child(even){text-align:left}
+.intro .sec_talk .talk li .bubble{display:inline-flex;align-items:center;min-height:3em;padding:5px 2em;border-radius:2em;border:1px solid #dbdbdc;font-size:12px;font-weight:300;opacity:0;transform:translateY(10px);transition:all .5s}
+.intro .sec_talk .talk li .bubble.cl2{border-color:#a2a2aa}
+.intro .sec_talk .talk li .bubble.cl3{border-color:#7160e9}
+.intro .sec_talk .talk li:nth-child(odd) .bubble{transform:translateX(-20px)}
+.intro .sec_talk .talk li:nth-child(even) .bubble{transform:translateX(20px)}
+.intro .sec_talk .talk li:nth-child(2) .bubble{transition-delay:.3s}
+.intro .sec_talk .talk li:nth-child(3) .bubble{transition-delay:.6s}
+.intro .sec_talk .talk[data-effect="show"] li .bubble{opacity:1;transform:translateX(0)}
+.intro .sec_comment{padding-top:60px}
+.intro .sec_comment .box{position:relative;padding-bottom:20px;border-radius:10px;text-align:center;color:#fff;background:#554ce9}
+.intro .sec_comment .box .txt1{position:absolute;top:-2.8em;left:0;width:100%;font-size:20px;color:#554ce9;line-height:1.4}
+.intro .sec_comment .box .txt1 span{color:#fff}
+.intro .sec_comment .box .txt2{padding-top:50px;font-size:12px;font-weight:300}
+.intro .sec_comment .light{position:relative;z-index:1;height:120px;margin-top:-15px;text-align:center}
+.intro .sec_comment .light img{display:inline-block;height:100%;width:auto}
+.intro .sec_comment .light img.on{position:absolute;top:0;left:50%;transform:translateX(-50%)}
+.intro .sec_comment .light[data-effect="show"] img.on{animation:blink-half 1s linear 4 both}
+.intro .sec_comment .txt3{padding-bottom:40px;font-size:20px;line-height:1.4;text-align:center;font-weight:700}
+.intro .sec_start{background:#363636}
+.intro .sec_start .box_txt,
+.intro .sec_start .box_bt{position:relative;max-width:450px;margin:0 auto}
+.intro .sec_start .bg{display:inline-block;width:100%;height:auto}
+.intro .sec_start .box_txt .txt{position:absolute;left:11%;top:47.6%;font-size:20px;color:#fff;line-height:1.4}
+.intro .sec_start .box_txt .txt b{font-size:1.2em}
+.intro .sec_start .box_bt .bt_lv{position:absolute;top:0;left:4.6875%;width:90.625%}
+
+/* 레벨테스트 - 시험 */
+.leveltest_section.test{display:flex;flex-direction:column;justify-content:center;align-items:center;width:100%;min-height:calc(100vh - 190px);background:#333 url(https://siwon-cdn.siwonschool.com/native/m/leveltest/bg_test.jpg) center center no-repeat;background-size:contain}
+.test .question{width:100%;max-width:450px;margin:0 auto;padding:20px 4.5vw}
+.test .question .part{display:none;width:100%}
+.test .question .part.on{display:block}
+.test .question .part .q{position:relative;height:250px}
+.test .question .part .q .front{display:flex;flex-direction:column;justify-content:center;align-items:center;position:absolute;top:0;left:0;width:100%;height:100%;border:5px solid #6c9ffc;-webkit-backface-visibility:hidden;backface-visibility:hidden;transition:all .6s}
+.test .question .part .q .front .txt{padding:.5em;font-size:20px;color:#fff;text-align:center;line-height:1.4}
+.test .question .part .q .front .bt_check{display:block;width:70%;height:2.5em;margin:1em auto 0;border-radius:1.5em;max-width:220px;font-size:16px;color:#2b2a2a;line-height:2.5;text-align:center;background:#fff}
+.test .question .part .q .back{display:flex;flex-direction:column;justify-content:center;align-items:center;position:absolute;top:0;left:0;width:100%;height:100%;background:#fff;transform:rotateY(-180deg);-webkit-backface-visibility:hidden;backface-visibility:hidden;transition:all .6s}
+.test .question .part .q .back .txt{font-size:15px;line-height:1.4;color:#858484;text-align:center}
+.test .question .part .q .back .txt em{display:inline-block;margin-top:1em;font-weight:500}
+.test .question .part .q .back .txt .answer{font-size:1.6em;font-weight:700;color:#3b3b3b}
+.test .question .part .q .back .bt_close{display:inline-block;position:absolute;top:10px;right:10px;width:20px;height:20px;background:url(https://siwon-cdn.siwonschool.com/comm/close_28x28_black.png) center center no-repeat;background-size:cover}
+
+.test .question .part .q.flip .front{transform:rotateY(180deg)}
+.test .question .part .q.flip .back{transform:rotateY(0)}
+.test .bts{display:flex;margin-top:40px}
+.test .bts .bt_lv{flex:1}
+.test .bts .bt_lv + .bt_lv{margin-left:40px}
+.test .result{display:none;width:100%;max-width:450px;margin:0 auto;padding-left:4.5vw;padding-right:4.5vw}
+.test .result.on{display:block}
+.test .result .lv{display:none;flex-direction:column;justify-content:center;align-items:center;position:relative;width:100%;height:250px;padding:1em;color:#fff;line-height:1.4;text-align:center;background:#6c9ffc}
+.test .result .lv.on{display:flex}
+.test .result .lv .grade{font-size:16px}
+.test .result .lv .recommend{font-size:20px;font-weight:bold}
+.test .result .lv .line_highlight::after{background:#276ef0}
+.test .result .lv .desc{margin-top:1em;font-size:12px;line-height:1.8}
+.test .result .lv .desc .line{border-bottom:1px solid #fff}

@@ -1,0 +1,91 @@
+/* 수강후기 */
+.list_top{height:46px;padding:10px 0}
+.list_top .total{line-height:26px;font-size:15px;color:#1a1a1a}
+.list_top .select_comm{float:right;min-width:7em}
+.review_list li{position:relative;padding:15px 0;border-bottom:1px solid #dbdbdc}
+.review_list li:first-child{border-top:1px solid #dbdbdc}
+.review_list li .info{position:relative;min-height:44px;padding-top:5px;padding-left:60px;padding-right:60px;margin-bottom:15px}
+.review_list li .info .avatar{display:inline-block;overflow:hidden;position:absolute;top:0;left:0;width:44px;height:44px;border-radius:50%;background:#f6f5fa}
+.review_list li .info .name{display:block}
+.review_list li .info .star_score{display:inline-block}
+
+.review_list li .edit{position:absolute;top:15px;right:10px}
+.review_list li .bt_edit{width:1.5em;height:1em;background:url(https://siwon-cdn.siwonschool.com/native/m/review/bt_edit.png) center center no-repeat;background-size:100% auto;outline:none}
+.review_list li .bt_edit + .bts{position:absolute;top:0;right:2.5em;opacity:0;pointer-events:none;transition:opacity .3s;border:1px solid #d4d4db;background:#fff}
+.review_list li .bt_edit:focus + .bts{opacity:1;pointer-events:initial}
+.review_list li .bts .bt{width:3.5em;height:1.8em;color:#656565}
+.review_list li .cate{display:block;color:#a582f7}
+.review_list li .tit{margin-bottom:1em;color:#1a1a1a}
+.review_list li .pics{overflow:hidden;height:60px;margin-bottom:1em}
+.review_list li .pics .list{display:flex}
+.review_list li .pics .list li{width:60px;height:60px;overflow:hidden;background-size:cover;background-position:center center;background-repeat: no-repeat}
+.review_list li .pics .list li + li{margin-left:5px}
+.review_list li .cont{margin-bottom:15px;font-size:12px}
+.review_list li [data-ellipsis]{display:inline}
+.review_list li .bt_more{margin-left:.5em;padding-bottom:.1em;border-bottom:1px solid #b7b7b7;font-size:12px;color:#b7b7b7}
+.review_list li .bt_more::after{content:'';clear:both}
+.review_list li .like .bt_like{min-width:70px;height:25px;padding-left:25px;border:1px solid #dbdbdc;border-radius:12px;color:#5e5e5e;background:#fff url(https://siwon-cdn.siwonschool.com/native/m/review/ico_like_off.png) 12px center no-repeat;background-size:auto 14px}
+.review_list li .like .bt_like.on{border-color:#2eb7c3;color:#fff;background-color:#2eb7c3;background-image:url(https://siwon-cdn.siwonschool.com/native/m/review/ico_like_on.png)}
+.review_list li .like .txt{color:#909090;vertical-align:middle}
+.review_list li .comment{overflow:hidden;position:relative;margin-top:15px;padding:15px 4.5vw;border-radius:15px;background:#f6f5fa}
+.review_list li .comment .name{margin-bottom:1em;color:#a582f7}
+.review_list li .comment .date{position:absolute;top:15px;right:4.5vw;font-size:12px;color:#4e4e4e}
+.review_list li .comment .txt{font-size:12px}
+.quick_bt_write{position:fixed;right:4.5vw;bottom:calc(106px + 4.5vw);z-index:100;width:40px;height:40px;border-radius:50%;background:#a582f7 url(https://siwon-cdn.siwonschool.com/native/m/review/ico_write.png) center center no-repeat;background-size:contain}
+/* 갤러리 */
+#layer_gallary .inner_popup{padding:0;background:#2c2c2c}
+#layer_gallary .pop_tit{padding-left:4.5vw;background:#fff}
+#layer_gallary .pop_cont{height:calc(100vh - 55px)}
+#layer_gallary .gallary_sl,
+#layer_gallary .swiper-container{height:100%}
+#layer_gallary .gallary_sl li{background-position:center center;background-size:contain;background-repeat:no-repeat}
+
+/* 쓰기 */
+.review_section.write{position:relative;padding-bottom:50px}
+.write .sec_info{padding:30px 4.5vw 20px;background:#f6f5fa}
+.write .sec_info .select_comm{width:100%;height:40px;line-height:40px}
+.write .sec_info .score_txt{padding-top:20px;padding-bottom:10px;text-align:center}
+.write .sec_info .ratingControl{position:relative;width:135px;margin:0 auto;}
+.write .sec_info .ratingControl input{visibility:hidden}
+.write .sec_info .ratingControl_stars {position:absolute;top:0;width:27px;height:26px;background:url(https://siwon-cdn.siwonschool.com/native/review/star_empty.png) 0 0 no-repeat;background-size:27px auto;cursor:pointer;text-indent:100%;white-space:nowrap;overflow:hidden}
+.write .sec_info .ratingControl_stars:hover, .sec_info  .ratingControl_stars:hover ~ .ratingControl_stars, .sec_info .ratingControl input:checked ~ .ratingControl_stars {background-image: url(https://siwon-cdn.siwonschool.com/native/review/star_full.png)}
+.write .sec_info .ratingControl_stars:active, .sec_info  .ratingControl_stars:active ~ .ratingControl_stars, .sec_info .ratingControl input:checked ~ .ratingControl_stars:active {background-image: url(https://siwon-cdn.siwonschool.com/native/review/star_full.png)}
+.write .sec_info .ratingControl_stars_05{left:0px}
+.write .sec_info .ratingControl_stars_1{left: 0px}
+.write .sec_info .ratingControl_stars_15{left:27px}
+.write .sec_info .ratingControl_stars_2{left:27px}
+.write .sec_info .ratingControl_stars_25{left:54px}
+.write .sec_info .ratingControl_stars_3{left:54px}
+.write .sec_info .ratingControl_stars_35{left:81px}
+.write .sec_info .ratingControl_stars_4{left: 81px}
+.write .sec_info .ratingControl_stars_45{left:108px}
+.write .sec_info .ratingControl_stars_5{left:108px}
+.write .sec_info .ratingControl_stars_half{width:13.5px}
+.write .sec_write{padding:20px 4.5vw}
+.write .sec_write .input_comm{height:40px;width:100%;line-height:40px}
+.write .sec_write .textarea_comm{height:200px;width:100%;margin-top:10px}
+.write .sec_attach{padding:20px 4.5vw;border-top:20px solid #f6f5fa;border-bottom:20px solid #f6f5fa}
+.write .sec_attach .file_wrap .file_box{overflow:hidden;position:relative;margin-bottom:20px}
+.write .sec_attach .file_wrap .file_box:last-child{margin-bottom:0}
+.write .sec_attach .file_wrap label{display:block}
+.write .sec_attach .file_wrap input{position:absolute;width:1px;height:1px;left:-9999em;outline:none}
+.write .sec_attach .bt_attach{width:100%}
+.write .sec_attach .bt_attach::before{content:'';width:18px;height:15px;margin-right:5px;vertical-align:middle;background:url(https://siwon-cdn.siwonschool.com/native/m/review/ico_camera.png) center center no-repeat;background-size:contain}
+.write .sec_attach .info{margin-top:10px;margin-bottom:10px}
+.write .sec_attach .info li{color:#6f6f6f;font-size:12px}
+.write .sec_attach .info li::before{content:'* '}
+.write .sec_attach .thum_area .list:after{content:'';clear:both;display:block}
+.write .sec_attach .thum_area .list li{position:relative;float:left;width:50px;height:50px;overflow:hidden}
+.write .sec_attach .thum_area .list li + li{margin-left:10px}
+.write .sec_attach .thum_area .list li .thumb{width:100%;height:auto}
+.write .sec_attach .thum_area .list li .del{display:inline-block;width:14px;height:14px;position:absolute;right:0;top:0;background:#333 url('//siwon-cdn.siwonschool.com/native/review/ico_del.png') center center no-repeat;background-size:10px auto}
+.write .sec_agree{padding:0 4.5vw;border-bottom:20px solid #f6f5fa}
+.write .sec_agree .tit{position:relative;height:50px;line-height:50px}
+.write .sec_agree .tit .arw{display:block;overflow:hidden;position:absolute;top:0;right:0;width:40px;height:100%;background:url(https://siwon-cdn.siwonschool.com/native/m/comm/ico_bt_arw.png) no-repeat center center;background-size:16px auto;transform:rotate(180deg)}
+.write .sec_agree[data-state="fold"] .tit .arw{transform:rotate(0)}
+.write .sec_agree .agree_cont{display:none;padding:15px 5px;border-top:1px solid #dbdbdc;font-size:12px}
+.write .bts{display:flex;position:fixed;bottom:56px;left:0;z-index:100;width:100%;border-top:1px solid #dbdbdc}
+.write .bts.stick{position:absolute;bottom:0}
+.write .bts .bt{flex:1;height:50px}
+.write .bts .bt_cancle{background:#fff}
+.write .bts .bt_send{color:#fff;background:#766cee}

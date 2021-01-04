@@ -1,0 +1,132 @@
+/* 마이페이지 */
+.my_box{padding-top:20px;padding-bottom:20px;background:#f6f5fa}
+.my_box .myinfo{position:relative;min-height:70px;margin-bottom:18px;padding-left:82px;font-size:12px}
+.my_box .myinfo .profile{display:block;position:absolute;top:0;left:0;width:70px;height:70px;background:#ddd;border-radius:5px}
+
+.my_box .myinfo .txt{display:block;margin-bottom:8px;font-size:13px}
+.my_box .myinfo .txt > em{font-weight:bold;color:#a582f7;vertical-align:top}
+.my_box .myinfo .info{display:block;padding-left:17px;background:url('//img.siwonschool.com/max/m/mypage/ico_alram.png') 0 2px no-repeat;background-size:12px}
+.my_box .btns{overflow:hidden}
+.my_box .btns a{display:block;float:left;width:48%;height:40px;margin-left:4%;border-radius:40px;background:#a582f7;text-align:center;color:#fff;line-height:40px}
+.my_box .btns a:first-child{margin-left:0}
+.myp_sec_cont{padding-top:20px;padding-bottom:20px;background:#fff}
+.myp_sec_cont .tmenu{margin-bottom:20px}
+.myp_sec_cont .sub_tit{display:block;position:relative;padding-bottom:8px;font-weight:bold;font-size:14px}
+.myp_sec_cont .sub_tit .txt{position:absolute;bottom:8px;right:0;font-weight:normal;font-size:11px}
+.myp_sec_cont .pay_list{border-top:1px solid #222}
+.myp_sec_cont .pay_list + .sub_tit{margin-top:20px}
+.myp_sec_cont .pay_list li{border-bottom:1px solid #ccc}
+.myp_sec_cont .pay_list li:first-child{border-top:none}
+.myp_sec_cont .pay_list li .tit{position:relative;padding:15px 1% 20px;box-sizing:border-box}
+.myp_sec_cont .pay_list li .tit > a{display:block}
+.myp_sec_cont .pay_list li .tit > a::after{content:'';display:inline-block;position:absolute;top:50%;right:5px;width:16px;height:9px;margin-top:-8px;background:url('//siwon-cdn.siwonschool.com/native/m/comm/ico_bt_arw.png') right center no-repeat;background-size:16px 9px;transform:rotate(-90deg)}
+.myp_sec_cont .pay_list.dropdown li .tit > a::after{margin-top:-4px;transform:rotate(0)}
+.myp_sec_cont .pay_list.dropdown li .tit > a.on::after{transform:rotate(180deg)}
+.myp_sec_cont .pay_list li .tit .status{display:block;font-size:11px;color:#666}
+.myp_sec_cont .pay_list li .tit .status em{margin-right:.5em;color:#a582f7}
+.myp_sec_cont .pay_list li .tit .class{display:block;font-size:13px}
+.myp_sec_cont .pay_list li .cont{display:none;padding:12px 10px;background:#fafafa;font-size:12px;line-height:1.6em}
+.myp_sec_cont .pay_list li .bt_area{display:flex;margin:15px 0;text-align:center}
+.myp_sec_cont .pay_list li .bt_area .bt_h40_black{flex:1}
+.myp_sec_cont .pay_list li .bt_area .bt_h40_black + .bt_h40_black{margin-left:10px}
+.myp_sec_cont .pay_list .no_data{padding:30px 0;background:#f5f5f5;font-size:12px;color:#666;text-align:center}
+.myp_sec_cont .pay_list .no_data .bt_h40_black{display:block;width:132px;margin:20px auto 0}
+.myp_sec_cont .monthly .bt_more{width:100%;margin-top:20px}
+.myp_sec_cont .exp_state{padding:15px;border-top:1px solid #222;background:#f5f5f5}
+.myp_sec_cont .exp_state .tit{display:block;padding-bottom:10px;font-weight:bold;font-size:13px;color:#a582f7}
+.myp_sec_cont .exp_state ul li{margin-top:2px;font-size:12px;color:#222;line-height:1.6}
+.myp_sec_cont .exp_state ul li:first-child{margin-top:0}
+.myp_sec_cont .exp_state .bt_area{margin-top:15px;text-align:center}
+.myp_sec_cont .exp_state .bt_area .bt_h40_black{width:132px;color:#666}
+.myp_sec_cont .exp_state .no_data{padding:30px 0;font-size:12px;color:#666;text-align:center}
+.myp_sec_cont .exp_state .no_data .bt_h40_black{width:132px;color:#666}
+.myp_sec_cont .ipt_coupon{overflow:hidden;margin-bottom:15px}
+.myp_sec_cont .ipt_coupon input[type='text']{display:block;float:left;width:73.44%;height:40px;padding:0 10px;margin-right:1.56%;border:1px solid #dbdbdb}
+.myp_sec_cont .ipt_coupon > a{float:left;width:25%;height:40px;background:#222;font-size:13px;font-weight:bold;text-align:center;line-height:40px;color:#fff}
+.myp_sec_cont .coupon_tab{overflow:hidden}
+.myp_sec_cont .coupon_tab li{float:left;width:50%;text-align:center}
+.myp_sec_cont .coupon_tab li button{display:block;width:100%;height:100%;background:#b6b6b6;line-height:40px;color:#fff;font-size:12px}
+.myp_sec_cont .coupon_tab li[data-state="on"] button{background:#6e6e6e}
+.myp_sec_cont .coupon_list{border-top:1px solid #222}
+.myp_sec_cont .coupon_list.none li{padding:20px 0;font-size:12px;text-align:center;color:666}
+.myp_sec_cont .coupon_list li{position:relative;padding:15px 95px 13px 6px;border-bottom:1px solid #ccc}
+.myp_sec_cont .coupon_list li.done{opacity:0.5}
+.myp_sec_cont .coupon_list li .cpn_name{display:block;font-size:12px}
+.myp_sec_cont .coupon_list li .cpn_exp{font-size:11px;color:#666}
+.myp_sec_cont .coupon_list li button{display:block;position:absolute;top:50%;right:6px;width:64px;height:30px;margin-top:-15px;background:#209fac;font-size:12px;text-align:center;line-height:30px;color:#fff}
+.myp_sec_cont .coupon_list li button:disabled{background:#6e6e6e;cursor:default}
+
+/* 레이어 팝업: 월정액 해지 */
+#layer_expcncl .inner_popup{background:#fff}
+#layer_expcncl .exp_box{margin-top:15px;padding:10px 15px;background:#f5f5f5}
+#layer_expcncl .exp_box .info_list li{margin-top:2px;font-size:12px;color:#222;line-height:1.6}
+#layer_expcncl .exp_box .info_list li:first-child{margin-top:0}
+#layer_expcncl .exp_box dl dt{padding-bottom:5px;font-weight:bold;font-size:12px;color:#222}
+#layer_expcncl .exp_box dl dd{padding-bottom:15px}
+#layer_expcncl .exp_box dl label{display:inline-block;margin-right:15px;padding-left:30px;font-size:12px}
+#layer_expcncl .exp_box select, #layer_expcncl .exp_box textarea{border:1px solid #e4e4e4;box-sizing:border-box}
+#layer_expcncl .wrap_slct select{display:inline-block;width:49%;height:35px;padding-left:10px;font-size:12px}
+#layer_expcncl .exp_box dl textarea{width:100%;height:90px;margin-top:5px;padding:5px 10px}
+#layer_expcncl .exp_box.b1{border:2px solid #222;background:none}
+#layer_expcncl .info_area .tit{height:auto;font-weight:bold;font-size:12px;color:#48abab;line-height:1.6}
+#layer_expcncl .info_area ul li{position:relative;margin-top:2px;padding-left:10px;font-size:12px;color:#999;line-height:1.6}
+#layer_expcncl .info_area ul li:before{position:absolute;top:9px;left:0;width:4px;height:1px;background:#999;content:''}
+#layer_expcncl .wrap_bt{display:flex;margin-top:20px}
+#layer_expcncl .wrap_bt a{flex:1}
+#layer_expcncl .wrap_bt a + a{margin-left:10px}
+
+/* 마이페이지 수업정지,재개 팝업 */
+#layer_stop{display:none}
+#layer_stop .inner_popup{background:#fff}
+#layer_stop .inner_popup .tbl_stop{width:100%;margin-top:10px}
+#layer_stop .inner_popup .tbl_stop th, #layer_stop .inner_popup .tbl_stop td{font-size:12px}
+#layer_stop .inner_popup .tbl_stop tr th{font-weight:bold;text-align:left}
+#layer_stop .inner_popup .tbl_stop tr th em{display:block;font-weight:bold;color:#666}
+#layer_stop .inner_popup .tbl_stop tr td{height:25px}
+#layer_stop .inner_popup .tbl_stop tr td select{width:100%;height:35px;padding:0 10px;border:1px solid #dbdbdb;line-height:35px;color:#666}
+#layer_stop .inner_popup .bt_apply{display:block;width:100%;height:40px;margin:17px 0 10px;background:#222;font-size:13px;font-weight:bold;text-align:center;line-height:40px;color:#fff}
+#layer_stop .inner_popup .noti_list{padding:15px 3.12% 28px;background:#f5f5f5;font-size:12px}
+#layer_stop .inner_popup .noti_list dt{margin-bottom:6px;color:#666}
+#layer_stop .inner_popup .noti_list dd{overflow-y:scroll;height:200px;line-height:1.6em;color:#666}
+#layer_stop .inner_popup .close_box{top:0}
+#layer_stop .inner_popup .close_box .bt_cls{width:17px;height:17px;padding:18px;background:url('//img.siwonschool.com/comm/close_24x24_black.png') center no-repeat;background-size:17px}
+
+/* 마이페이지 기기 등록 현황(전사이트 공통) */
+#device_Layer .inner_popup{background:#fff}
+#device_Layer .inner_popup h3{margin:0 15px;padding:17px 0 12px;font-size:16px;font-weight:bold}
+
+/* 결제정보 상세 */
+.mypage_section.payinfo{padding:35px 4.5vw;background:#f6f5fa}
+.payinfo .payment_info{background:#fff}
+.payinfo .payment_info + .payment_info{margin-top:10px}
+.payinfo .payment_info .tit_info{position:relative;padding:0 2vw;border-bottom:2px solid #f6f5fa;font-size:16px;font-weight:bold;line-height:2em}
+.payinfo .payment_info .info_cont{padding:10px 2vw}
+.payinfo .payment_info .li_st1 li{position:relative;padding-left:80px;min-height:70px;font-size:12px;}
+.payinfo .payment_info .li_st1 li + li{margin-top:10px}
+.payinfo .payment_info .li_st1 li:first-child{border-top:0}
+.payinfo .payment_info .li_st1 li .thumb{position:absolute;top:0;left:0;width:70px;height:70px;overflow:hidden}
+.payinfo .payment_info .li_st1 li .cate{display:inline-block;min-width:4em;font-size:11px;color:#fff;text-align:center;background:#129ea3}
+.payinfo .payment_info .li_st1 li .subject{display:block}
+.payinfo .payment_info .li_st1 li .price_info{display:block;margin-top:5px;text-align:right}
+.payinfo .payment_info .li_st2 li{overflow:hidden;position:relative;padding:5px 0;line-height:1.4}
+.payinfo .payment_info .li_st2 li .th{display:block;position:absolute;left:0;width:80px}
+.payinfo .payment_info .li_st2 li .td{display:block;margin-left:80px;color:#666}
+.payinfo .payment_info .li_st2.side li .td{text-align:right}
+.payinfo .payment_info .li_st2 .total{padding-top:10px;border-top:1px solid #f6f5fa}
+.payinfo .payment_info .li_st2 .total .total_price{display:block;font-size:1.1em;font-weight:700}
+.payinfo .payment_info .bt_address{float:right;height:1.5em;margin-top:7px;padding:0 .5em;border:1px solid #777;font-size:11px;color:#3c3c3c;line-height:1.5}
+.payinfo .bt_list{margin-top:20px}
+
+/* 레이어팝업 : 배송지 변경/확인 */
+#layer_address .item{margin-top:20px}
+#layer_address .item .tit{margin-bottom:.5em}
+#layer_address .item input{width:100%;height:40px}
+#layer_address .item input.err{border-color:#ff0000}
+#layer_address .item input.err + .err_msg{display:block;font-size:9px;color:#ff0000;line-height:1.6}
+#layer_address .item .post{display:flex}
+#layer_address .item .post input{flex:1}
+#layer_address .item .post [class^="bt"]{margin-left:10px;padding:0 2em}
+#layer_address .item input.mt{margin-top:10px}
+#layer_address .bts{display:flex;position:absolute;bottom:0;left:0;width:100%}
+#layer_address .bts [class^="bt"]{flex:1}
+#layer_address .bts .bt_em50_black{opacity:.5}

@@ -1,0 +1,8 @@
+.table_st1{width:100%}
+.table_st1 th{padding:10px 5px;line-height:1.2;font-size:12px;text-align:center;border-bottom:1px solid #ddd;background:#eee}
+.table_st1 tbody td{padding:14px 3px;line-height:1.2;text-align:center;border-bottom:1px solid #ddd;background:#fff}
+.table_st1 tfoot td{padding:14px 3px;line-height:1.2;font-size:12px;text-align:center;background:#fff}
+.table_st2{width:100%;margin:10px 0}
+.table_st2 th{min-height:42px;padding-left:10px;line-height:42px;text-align:left;vertical-align:top}
+.table_st2 td{min-height:42px;padding-right:10px;line-height:42px;text-align:left;vertical-align:middle}
+.table_st2 td p{height:42px}

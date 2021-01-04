@@ -1,0 +1,18 @@
+a {
+	vertical-align: baseline;
+}
+
+/**
+ * 사이트 기본 폰트 지정
+ */
+body {
+	font-family: 'Source Serif Pro', serif;
+	font-size: 13px;
+	color: #000;
+	font-weight: 300;
+	line-height: 1.4;
+	word-break: keep-all;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+

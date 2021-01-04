@@ -1,0 +1,114 @@
+/**
+ * Media Query
+ */
+@mixin max-w($attr) {
+	@media all and (max-width: #{$attr}px) {
+		@content;
+	}
+}
+@mixin min-w($attr) {
+	@media all and (min-width: #{$attr}px) {
+		@content;
+	}
+}
+@mixin min-max-w($min, $max) {
+	@media all and (min-width: #{$min}px) and (max-width: #{$max}px) {
+		@content;
+	}
+}
+
+/**
+ * Site common
+ */
+@mixin fullpage($display: flex) {
+	display: $display;
+	width: 100vw;
+	height: 100vh;
+
+}
+
+/**
+ * General
+ */
+@mixin clearfix {
+	&::after {
+		content: '';
+		display: block;
+		width: 100%;
+		clear: both;
+	}
+}
+
+@mixin pos-abs-tl {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+@mixin pos-abs-tr {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+@mixin pos-abs-mid($z-index: 1) {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	z-index: $z-index;
+}
+
+@mixin cube-arrow($width, $top, $right: transparent, $bottom: transparent, $left: transparent) {
+	width: 0;
+	height: 0;
+	border-top: #{$width}px solid $top;
+	border-right: #{$width}px solid $right;
+	border-bottom: #{$width}px solid $bottom;
+	border-left: #{$width}px solid $left;
+}
+
+@mixin retina-bgi($uri, $extension) {
+	background-image: url('#{$uri}.#{$extension}');
+
+	@media all and (-webkit-min-device-pixel-ratio: 1.5),
+	all and (-o-min-device-pixel-ratio: 3/2),
+	all and (min--moz-device-pixel-ratio: 1.5),
+	all and (min-device-pixel-ratio: 1.5) {
+		background-image: url('#{$uri}@2x.#{$extension}');
+	}
+}
+
+@mixin user-select($default: none) {
+	user-select: #{$default};
+	pointer-events: #{$default};
+	touch-action: #{$default};
+}
+
+@mixin placeholder() {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+	&::-moz-placeholder {
+		@content;
+	}
+	&:-ms-input-placeholder {
+		@content;
+	}
+	&:-moz-placeholder {
+		@content;
+	}
+	&::placeholder {
+		@content;
+	}
+}
+
+/**
+ * animation
+ */
+
+@for $i from 1 through 5 {
+	.ani-duration-#{$i}s {
+		animation-duration: 1s * $i !important;
+	}
+}

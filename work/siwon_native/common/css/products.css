@@ -1,0 +1,33 @@
+/* 수강신청 */
+.products_section .wrap_product_list{padding-top:8vw;padding-bottom:8vw}
+.products_section .prod_list .tit{padding-bottom:.5em;font-size:18px;font-weight:700;color:#1a1a1a;line-height:1}
+.products_section .prod_list .list{margin-bottom:35px;border-top:1px solid #c5c5c5}
+.products_section .prod_list .list a{display:inline-block;position:relative;margin:20px 0;padding-left:155px}
+.products_section .prod_list .list .img_area{position:absolute;top:0;left:0;width:140px;height:140px;overflow:hidden}
+.products_section .prod_list .list .img_area img{width:100%;height:auto}
+.products_section .prod_list .list .box{position:relative;min-height:140px;padding-bottom:35px}
+.products_section .prod_list .list .box .p_name{padding:.3em 0;font-size:20px;color:#1a1a1a;line-height:1.2}
+.products_section .prod_list .list .box .p_hash{color:#a582f7;font-size:12px}
+.products_section .prod_list .list .box .p_hash span{display:inline-block;white-space:nowrap;margin-right:.5em}
+.products_section .prod_list .list .box .badges{margin-top:1em}
+.products_section .prod_list .list .box .badges .badge{display:inline-block;height:16px;padding:0 10px;border-radius:8px;font-size:12px;line-height:16px;color:#fff;background:#a582f7}
+.products_section .prod_list .list .box .badges .badge.prod{background:#a582f7}
+.products_section .prod_list .list .box .badges .badge.new{background:#65c0ff}
+.products_section .prod_list .list .box .badges .badge.hot{background:#55e1dc}
+.products_section .prod_list .list .box .price_area{position:absolute;bottom:0;width:100%}
+.products_section .prod_list .list .box .price_area .per_txt{float:left;font-size:20px;color:#a582f7;font-weight:700}
+.products_section .prod_list .list .box .price_area .per_txt span{font-weight:400;font-size:.8em}
+.products_section .prod_list .list .box .price_area .price{float:right;font-size:20px;color:#1a1a1a;font-weight:700}
+.products_section .prod_list .list .box .price_area .price span{font-weight:400;font-size:.8em}
+.products_section .prod_list .list .bt_pay{width:100%}
+
+/* 옵션 선택 팝업 */
+.pop_slide#slide_apply .pop_box .pop_cont .item{position:relative;min-height:36px;padding:5px 0 5px 4em;text-align:right}
+.pop_slide#slide_apply .pop_box .pop_cont .item .tit{position:absolute;top:50%;left:0;margin-top:-.5em;line-height:1;font-weight:700}
+.pop_slide#slide_apply .pop_box .pop_cont .item .desc{line-height:30px}
+.pop_slide#slide_apply .pop_box .pop_cont .item .select_comm{min-width:160px}
+.pop_slide#slide_apply .pop_box .pop_cont .item .count{display:inline-block;overflow:hidden;vertical-align:middle;margin-left:4px}
+.pop_slide#slide_apply .pop_box .pop_cont .item .count .book_count{float:left;width:26px;height:26px;background-color:#fff;text-align:center;border-top:solid 1px #dbdbdc;border-bottom:solid 1px #dbdbdc;box-sizing:border-box;}
+.pop_slide#slide_apply .pop_box .pop_cont .item .count button.btn{float:left;width:26px;height:26px;line-height:26px;border:solid 1px #dbdbdc;background-color:#fbfbfb;color:#636363;font-size:16px;font-weight:300}
+.pop_slide#slide_apply .pop_box .pop_cont .item .price{font-size:1.2em}
+.pop_slide#slide_apply .pop_box .bt_pay{width:100%;margin-bottom:4.5vw}

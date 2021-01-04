@@ -1,0 +1,168 @@
+/* 진행율 바 */
+.progress_bar_comm{display:inline-block;position:relative;width:100%;height:10px;border-radius:5px;background-color:#f5f4f9}
+.progress_bar_comm::after{content:'100%';position:absolute;top:calc(100% + 5px);right:5px;font-size:12px;font-weight:300;line-height:1;letter-spacing:-0.93px;color:#bbb}
+.progress_bar_comm .bar{display:inline-block;position:absolute;top:-1px;left:0;height:15px;border-radius:7.5px;background-image:linear-gradient(to right, #647afd, #5cdfff)}
+.progress_bar_comm .bar:after{content:'NATIVE';display:inline-block;color:rgba(255,255,255,0.5);letter-spacing:-0.28px;font-size:11px;font-weight:300;line-height:15px;position:absolute;top:0;right:10px}
+
+/* 내강의실 */
+.myclass .user_box{padding-top:25px;padding-bottom:25px;background:#f6f5fa}
+.myclass .user_box b{font-size:1.3em;color:#454546}
+.myclass .user_box .u_name{font-weight:700;color:#1a1a1a}
+.myclass .attendance .att{padding-top:40px}
+.myclass .attendance .att .tit{position:relative;padding-bottom:.5em;margin-bottom:20px;font-size:18px;color:#1a1a1a;border-bottom:1px solid #c5c5c5}
+.myclass .attendance .att .count{position:absolute;right:0;bottom:.8em;font-size:13px;color:#766cee}
+.myclass .attendance .att .count i{position:relative;top:-4px;font-size:18px;font-weight:700}
+.myclass .attendance .att .stamp{display:flex;    justify-content: space-between}
+.myclass .attendance .att .stamp li{border:1px solid #bbb;background:#fff;box-sizing:border-box;width:calc((100vw - 9vw - 24px) / 7);height:calc((100vw - 9vw - 24px) / 7);border-radius:50%;position:relative;text-align:center}
+.myclass .attendance .att .stamp li + li{margin-left:4px}
+.myclass .attendance .att .stamp li a{display:flex;justify-content:center;align-items:center;position:absolute;top:50%;left:50%;width:calc(100% - 4px);height:calc(100% - 4px);border:1px solid #bbb;border-radius:50%;text-align:center;box-sizing:border-box;transform: translate(-50%, -50%);font-size:12px;font-weight:300;letter-spacing:-0.8px;color:#858484;background:#fff}
+.myclass .attendance .att .stamp li.on{border-color:#766cee;background:#766cee}
+.myclass .attendance .att .stamp li.on a{border-color:#fff;background:#766cee;color:#fff}
+.myclass .attendance .att .stamp li.on a:after{content:'';width:7px;height:7px;display:inline-block;position:absolute;top:3px;left:50%;transform:translateX(-50%);background:url('//siwon-cdn.siwonschool.com/native/myclass/star.png') 0 0 no-repeat;background-size:contain}
+.myclass .lec_box{margin-top:40px}
+.myclass .lec_box > .tit{padding-bottom:.5em;font-size:18px;color:#1a1a1a;font-weight:700}
+.myclass .lec_box .list{margin-bottom:35px;border-top:1px solid #c5c5c5}
+.myclass .lec_box .deph_list + .list{margin-top:35px}
+.myclass .lec_box .list .box_cont{display:inline-block;position:relative;margin:20px 0;padding-left:155px}
+.myclass .lec_box .list .box_cont .img_area{position:absolute;top:0;left:0;width:140px;height:140px;overflow:hidden}
+.myclass .lec_box .list .box_cont .img_area img{width:100%;height:auto}
+.myclass .lec_box .list .box_cont .txt_area{position:relative;min-height:140px}
+.myclass .lec_box .list .box_cont .txt_area b.tit{display:block;font-size:20px;font-weight:bold;color:#1a1a1a;margin-bottom:.5em}
+.myclass .lec_box .list .box_cont .txt_area table tr{display:block;color:#6b6b6b;font-weight:300}
+.myclass .lec_box .list .box_cont .txt_area table th{width:4em;font-weight:300;color:#a582f7;vertical-align:top;text-align:left}
+.myclass .lec_box .list .box_cont .txt_area table td{padding-left:12px}
+.myclass .lec_box .list .btns_area{display:flex}
+.myclass .lec_box .list .btns_area .btn{flex:1;width:50%}
+.myclass .lec_box .list .btns_area a + a{margin-left:10px}
+.myclass .lec_box .list .btns_area .btn.db_line{padding:10px 0;line-height:1.2}
+.myclass .lec_box .list .btns_area .btn.db_line .desc{display:block;font-size:.8em;color:#7b7b7b}
+.myclass .lec_box .list .bt_study{width:100%;margin-top:10px}
+.myclass .lec_box .deph_list{width:100vw;margin-left:-4.5vw;background:#f6f5fa}
+.myclass .lec_box .deph_list .btn_more{display:block;width:100%;height:48px;line-height:48px;background:#f6f5fa;text-align:center}
+.myclass .lec_box .deph_list .btn_more span:after{display:inline-block;content:'강좌 목록 펼쳐보기';font-weight:300;color:#656464;letter-spacing:-1.35px;margin-right:9px}
+.myclass .lec_box .deph_list .btn_more i:after{display:inline-block;content:'';background:url(https://siwon-cdn.siwonschool.com/native/myclass/ico_toggle.png) 0 0 no-repeat;vertical-align:2px;width:9px;height:8px;display:inline-block}
+.myclass .lec_box .deph_list .btn_more.on i:after{transform:rotate(180deg);vertical-align:3px}
+.myclass .lec_box .deph_list .btn_more.on span:after{content:'강좌 목록 닫기'}
+.myclass .lec_box .deph_list .lec_list{display:none}
+.myclass .lec_box .deph_list.on .lec_list{display:block}
+.myclass .lec_box .deph_list .lec_list .lec:first-child{margin-top:20px}
+.myclass .lec_box .deph_list .lec_list .lec:last-child{margin-bottom:20px}
+.myclass .lec_box .deph_list .lec_list .lec + .lec{margin-top:10px}
+.myclass .lec_box .deph_list .lec_list .lec a{display:block;position:relative;padding-left:80px;min-height:70px;padding-top:5px;padding-right:35px}
+.myclass .lec_box .deph_list .lec_list .lec a::after{content:'';display:block;overflow:hidden;position:absolute;top:50%;right:-10px;width:35px;height:35px;margin-top:-20px;background:url(https://siwon-cdn.siwonschool.com/native/m/comm/ico_bt_arw.png) no-repeat center center;background-size:16px auto;transform:rotate(270deg)}
+.myclass .lec_box .deph_list .lec_list .img_area{overflow:hidden;position:absolute;top:0;left:0;width:70px;height:70px}
+.myclass .lec_box .deph_list .lec_list .img_area img{width:100%;height:100%}
+.myclass .lec_box .deph_list .lec_list .txt_area b.tit{display:block;font-size:15px;font-weight:bold;color:#1a1a1a}
+.myclass .lec_box .deph_list .lec_list .txt_area .rate{position:relative;margin-top:10px;line-height:1}
+.myclass .lec_box .deph_list .lec_list .txt_area .rate .txt{color:#1a1a1a}
+.myclass .lec_box .deph_list .lec_list .txt_area .rate .per{display:inline-block;font-weight:bold;margin-left:7px;color:#766cee}
+.myclass .lec_box .deph_list .lec_list .txt_area .rate .per i{font-size:.8em;font-weight:300}
+.myclass .lec_box .deph_list .lec_list .txt_area .rate .wrap_bar{display:inline-block;position:relative;width:100%;height:3px;border-radius:1.5px;background-color:#dfdfe7}
+.myclass .lec_box .deph_list .lec_list .txt_area .rate .wrap_bar .bar{display:inline-block;position:absolute;top:-1px;left:0;height:5px;border-radius:2.5px;background-image:linear-gradient(to right, #647afd, #5cdfff)}
+.myclass .lec_box .deph_list .lec_list .txt_area .rate .count{display:inline-block;float:right;font-size:13px;letter-spacing:-1.35px;color:#1a1a1a;text-align:right;font-weight:300}
+.myclass .lec_box .deph_list .lec_list .txt_area .rate .count .all{font-size: 12px;color:#6b6b6b}
+.myclass .lec_box .empty_box{padding:50px 4.5vw;border-top:1px solid #c5c5c5}
+.myclass .lec_box .empty_box .txt{margin-bottom:50px;text-align:center;line-height:1.4}
+.myclass .lec_box .empty_box .bt_em50_black{width:100%}
+
+/* 내강의실 - 상세 */
+.classroom{padding:25px 2vw;background:#f6f5fa}
+.classroom .top_sec .lec_tit{margin-bottom:25px;font-size:18px;text-align:center}
+.classroom .top_sec .tcon{margin-top:15px}
+.classroom .top_sec .tcon li{padding:20px 2.5vw;border:1px solid #dbdbdb;background:#fff}
+.classroom .top_sec .tcon li .con_tit{display:inline-block;font-size:18px;color:#1a1a1a}
+.classroom .top_sec .tcon li .per{display:inline-block;float:right;margin-top:10px;letter-spacing:-1px;color:#766cee}
+.classroom .top_sec .tcon li .per i{position:relative;top:-2px;font-size:18px;font-weight:700;}
+.classroom .top_sec .tcon li .info{font-size:12px;font-weight:300;color:#3c3c3c}
+.classroom .top_sec .lectures{margin-top:20px}
+.classroom .top_sec .lectures .lec{position:relative;margin-top:10px}
+.classroom .top_sec .lectures .lec .play{display:flex;align-items:center;width:100%;padding-right:50px}
+.classroom .top_sec .lectures .lec .play::after{content:'';display:inline-block;position:absolute;top:50%;right:0;width:40px;height:40px;transform:translateY(-50%);background:url(https://siwon-cdn.siwonschool.com/native/m/myclass/btn_play.png) center center no-repeat;background-size:contain}
+.classroom .top_sec .lectures .lec .play .info{width:4em}
+.classroom .top_sec .lectures .lec .play .img_area{width:70px;height:50px;margin:0 .5em;overflow:hidden;background-size:cover;background-position:center center}
+.classroom .top_sec .lectures .lec .play .txt_area{width:calc(100% - 5em - 70px);text-align:left;font-size:12px}
+.classroom .top_sec .lectures .lec .play .txt_area .tit{display:block;color:#1a1a1a}
+.classroom .top_sec .lectures .lec .play .txt_area .desc{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.classroom .search_sec{margin-top:20px}
+.classroom .search_sec .search_tab{overflow:hidden;margin-top:10px}
+.classroom .search_sec .search_tab > a{position:relative;float:left;width:50%;height:40px;padding-left:31px;border:1px solid #dbdbdb;font-size:12px;line-height:40px;box-sizing:border-box}
+.classroom .search_sec .search_tab > a::after{display:block;position:absolute;top:16px;right:12px;width:10px;height:6px;background:url(https://siwon-cdn.siwonschool.com/native/m/comm/ico_bt_arw.png) 0 no-repeat;background-size:10px 6px;content:'';box-sizing:border-box}
+.classroom .search_sec .search_tab > a:nth-child(1){background:url(https://siwon-cdn.siwonschool.com/native/m/myclass/ico_bt_sch.png) 11px 15px no-repeat #fff;background-size:11px}
+.classroom .search_sec .search_tab > a:nth-child(2){border-left:none;background:url(https://siwon-cdn.siwonschool.com/native/m/myclass/ico_bt_sort.png) 11px 15px no-repeat #fff;background-size:11px}
+.classroom .search_sec .search_tab > a.on{color:#fff}
+.classroom .search_sec .search_tab > a:nth-child(1).on{background:url(https://siwon-cdn.siwonschool.com/native/m/myclass/ico_bt_sch_on.png) 11px 15px no-repeat #766cee;background-size:11px}
+.classroom .search_sec .search_tab > a:nth-child(2).on{background:url(https://siwon-cdn.siwonschool.com/native/m/myclass/ico_bt_sort_on.png) 11px 15px no-repeat #766cee;background-size:11px}
+.classroom .search_sec .search_tab > a.on::after{background:url(https://siwon-cdn.siwonschool.com/native/m/comm/ico_bt_arw_on.png) 0 no-repeat;background-size:11px}
+.classroom .search_sec .srch_box{padding:3%;border:1px solid #dbdbdb;border-top:0;background:#fff;box-sizing:border-box}
+.classroom .search_sec .srch_box .select_wrap{margin-bottom:10px}
+.classroom .search_sec .srch_box select{display:block;width:100%;height:35px;padding:0 1.56%;border:1px solid #ececec;color:#666;font-size:12px;line-height:35px}
+.classroom .search_sec .srch_box .box2{overflow:hidden;margin-top:5px}
+.classroom .search_sec .srch_box .box2 select{float:left;width:25%}
+.classroom .search_sec .srch_box .box2 input{float:right;width:73%}
+.classroom .search_sec .srch_box .sch_selc .selc_sort{width:100%;margin-bottom:8px}
+.classroom .search_sec .srch_box .input_srch{display:block;width:100%;height:35px;padding:5px 10px 5px 30px;border:1px solid #ececec;background:url(https://siwon-cdn.siwonschool.com/native/m/myclass/ico_ipt_sch.png) 10px center no-repeat;background-size:15px;font-size:12px;line-height:35px;color:#666}
+.classroom .search_sec .srch_box .btn_area{overflow:hidden;margin-top:10px}
+.classroom .search_sec .srch_box .btn_area a{float:left;width:48.44%;height:40px;border:1px solid #454545;font-size:12px;font-weight:bold;text-align:center;line-height:40px;box-sizing:border-box}
+.classroom .search_sec .srch_box .btn_area a:nth-child(1){margin-right:3.12%;background:#fff;color:#454545}
+.classroom .search_sec .srch_box .btn_area a:nth-child(2){background:#454545;color:#fff}
+.classroom .search_sec .sort_box{margin-bottom:15px;border:1px solid #dbdbdb;border-top:0;border-bottom-width:0;background:#fff}
+.classroom .search_sec .sort_box .sort_list{overflow:hidden;border-bottom:1px solid #dbdbdb}
+.classroom .search_sec .sort_box .sort_list li{float:left;width:50%;border-bottom:1px solid #dbdbdb;box-sizing:border-box}
+.classroom .search_sec .sort_box .sort_list li:nth-child(2n+1){border-right:1px solid #dbdbdb}
+.classroom .search_sec .sort_box .sort_list li:nth-child(5){border-bottom:0}
+.classroom .search_sec .sort_box .sort_list li:last-child{border-bottom:0}
+.classroom .search_sec .sort_box .sort_list li a{display:block;height:35px;padding:0 12px;font-size:11px;line-height:35px}
+.classroom .search_sec .sort_box .sort_list li a.on{color:#766cee}
+.classroom .search_sec .sort_area{overflow:hidden;margin:12px 0 6px 0}
+.classroom .search_sec .sort_area p{float:left;color:#000;font-size:12px;font-weight:bold}
+.classroom .search_sec .sort_area span {font-size:12px;display:block;margin-left:100px;font-weight:bold}
+.classroom .search_sec .sort_area .btn_bookmark{float:right;color:#000;font-size:11px}
+.classroom .search_sec .sort_area .btn_bookmark i{display:inline-block;width:12px;height:12px;margin-right:3px;background:url(https://siwon-cdn.siwonschool.com/native/m/myclass/ico_bookmark.png) 0 0 no-repeat;background-size:100%;vertical-align:bottom}
+.classroom .search_sec .sort_area .btn_bookmark.on{color:#766cee}
+.classroom .search_sec .sort_area .btn_bookmark.on i {background-position-y:102%}
+.classroom .btm_sec .sort_area{position:relative;margin-top:.5em}
+.classroom .btm_sec .sort_area .tit{margin:.3em 0;font-size:13px;font-weight:700;color:#1a1a1a}
+.classroom .btm_sec .sort_area .btn_group{position:absolute;bottom:0;right:0}
+.classroom .btm_sec .sort_area .btn_group button{color:#333;font-size:12px;}
+.classroom .btm_sec .sort_area .btn_group button + button{margin-left:.5em}
+.classroom .btm_sec .sort_area .btn_group i{display:inline-block;position:relative;top:-2px;vertical-align:middle;margin-right:3px}
+.classroom .btm_sec .sort_area .btn_group .btn_download i{width:13px;height:15px;background:url(https://siwon-cdn.siwonschool.com/native/myclass/m/ico_download.png) center center;background-size:contain;}
+.classroom .btm_sec .sort_area .btn_group .btn_bookmark i{width:13px;height:13px;background:url(https://siwon-cdn.siwonschool.com/native/m/myclass/ico_bookmark.png)  center top no-repeat;background-size:100% auto}
+.classroom .btm_sec .sort_area .btn_group .btn_bookmark.on{color:#e85350}
+.classroom .btm_sec .sort_area .btn_group .btn_bookmark.on i{background-position-y:bottom}
+.classroom .btm_sec .empty_box{padding:20vw 0}
+.classroom .btm_sec .empty_box p{color:#666;font-size:13px;text-align:center}
+.classroom .btm_sec .lec_box{position:relative;padding-right:20px;border:1px solid #dbdbdb;background:#fff}
+.classroom .btm_sec .lec_box + .lec_box{margin-top:10px}
+.classroom .btm_sec .lec_box a{display:block;overflow:hidden;padding:10px 0 10px 4.5vw}
+.classroom .btm_sec .lec_box a + a{padding-top:0}
+.classroom .btm_sec .lec_box .box1{overflow:hidden;float:left;width:75px}
+.classroom .btm_sec .lec_box .box1 .thumb{position:relative;width:100%;height:38px}
+.classroom .btm_sec .lec_box .box1 .thumb::before{content:'';display:block;position:absolute;top:0;left:0;z-index:1;width:100%;height:100%;background:url(https://siwon-cdn.siwonschool.com/native/m/myclass/ico_player.png) center no-repeat;background-size:5vw}
+.classroom .btm_sec .lec_box .box1 .thumb img{width:100%}
+.classroom .btm_sec .lec_box .box1 .thumb .view_cnt{position:absolute;bottom:0;right:0;height:9px;padding:2px;background:rgba(0,0,0,.5);color:#fff;font-size:9px;line-height:7px}
+.classroom .btm_sec .lec_box .box1 .mov_progress{position:relative;width:100%;height:5px}
+.classroom .btm_sec .lec_box .box1 .mov_progress .bar_wrap{width:100%;height:100%;border-top:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4;background:#efefef;box-sizing:border-box}
+.classroom .btm_sec .lec_box .box1 .mov_progress .bar_wrap .graph{height:100%;background:#48abab}
+.classroom .btm_sec .lec_box .box2{float:left;width:calc(100% - 75px - 4vw);padding-left:4vw}
+.classroom .btm_sec .lec_box .box2 .tit{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:1;font-size:12px;margin-bottom:2px}
+.classroom .btm_sec .lec_box .box2 .tit .tag{height:14px;margin-right:4px;padding:0 .25em;font-size:.9em;color:#fff;line-height:14px;background:#48abab}
+.classroom .btm_sec .lec_box .box2 .tit .lv{margin-right:4px;color:#48abab;font-weight:bold}
+.classroom .btm_sec .lec_box .box2 .desc{overflow:hidden;height:3em;color:#999;font-size:10px;word-wrap:break-word;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.classroom .btm_sec .lec_box .bt_bookmark{position:absolute;top:5px;right:5px;width:13px;height:13px;background:url(https://siwon-cdn.siwonschool.com/native/m/myclass/ico_bookmark2.png) 0 0 no-repeat;background-size:13px auto;outline:none}
+.classroom .btm_sec .lec_box .bt_bookmark.on{background-position-y:bottom}
+.classroom .btm_sec .lec_box .down{position:absolute;bottom:0;right:5px}
+.classroom .btm_sec .lec_box .down .bt_down{width:1em;height:1em;background:url(https://siwon-cdn.siwonschool.com/native/m/review/bt_edit.png) center center no-repeat;background-size:100% auto;outline:none}
+.classroom .btm_sec .lec_box .down .bt_down + .bts{position:absolute;top:0;right:1.5em;z-index:1;padding:0 .5em;opacity:0;pointer-events:none;transition:opacity .3s;border:1px solid #d4d4db;background:#fff}
+.classroom .btm_sec .lec_box .down.on .bt_down + .bts{opacity:1;pointer-events:initial}
+.classroom .btm_sec .lec_box .down .bts .bt{display:block;white-space:nowrap;height:1.8em;font-size:12px;color:#656565}
+
+
+/* 강의재생방법 팝업 */
+.pop_slide#slide_player .player_list{overflow:hidden;width:100%}
+.pop_slide#slide_player .player_list li{float:left;width:calc( 50% - 5px );border:1px solid #222;box-sizing:border-box}
+.pop_slide#slide_player .player_list li:first-child{margin-right:10px}
+.pop_slide#slide_player .player_list li a{display:block;overflow:hidden;position:relative;height:100px;padding-top:64px;font-size:13px;color:#222;text-align:center;box-sizing:border-box}
+.pop_slide#slide_player .player_list li a:before{display:block;position:absolute;top:20px;width:100%;height:31px;background:url(https://siwon-cdn.siwonschool.com/native/m/myclass/sp_player.png) no-repeat;background-size:33px auto;background-position-x:center;content:''}
+.pop_slide#slide_player .player_list li:nth-child(1) a:before{background-position-y:0}
+.pop_slide#slide_player .player_list li:nth-child(2) a:before{top:27px;background-position-y:-40px}
