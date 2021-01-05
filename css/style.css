@@ -72,8 +72,12 @@ article{position:relative;min-height:100vh;padding:100px 15vw}
 .portfolio .list li .desc{position:absolute;left:1vw;bottom:98%;z-index:1;padding:20px;border-radius:30px;font-size:14px;color:#333;text-align:left;font-weight:300;background:#fff;opacity:0;transition:opacity .2s;pointer-events:none}
 .portfolio .list li:hover .desc{opacity:1;pointer-events:auto}
 .portfolio .list li .desc:before{content:'';display:inline-block;position:absolute;top:initial;bottom:-10px;left:50px;z-index:2;border-left:20px solid #fff;border-top:20px solid transparent;transform:rotate(-45deg)}
-.portfolio .list li .desc.b{top:80%;bottom:initial}
-.portfolio .list li .desc.b:before{top:-10px;bottom:initial;transform:rotate(135deg)}
+.portfolio .list li:nth-child(4) .desc,
+.portfolio .list li:nth-child(5) .desc,
+.portfolio .list li:nth-child(6) .desc{top:80%;bottom:initial}
+.portfolio .list li:nth-child(4) .desc::before,
+.portfolio .list li:nth-child(5) .desc::before,
+.portfolio .list li:nth-child(6) .desc::before{top:-10px;bottom:initial;transform:rotate(135deg)}
 .portfolio .list li .desc .tit{white-space:nowrap;font-size:1.2em;font-weight:500;color:inherit}
 .portfolio .list li .desc .sub_tit{display:inline-block;padding-top:.5em}
 .portfolio .list li .desc .note{color:#01d59b}
