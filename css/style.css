@@ -57,8 +57,8 @@ article{position:relative;min-height:100vh;padding:100px 15vw}
 .intro .cont .item .desc b{color:#01d59b}
 .portfolio{padding-top:200px}
 .portfolio .head{text-align:center;padding-bottom:100px}
-.portfolio .list{padding:0 5vw;text-align:center}
-.portfolio .list li{display:inline-block;position:relative;width:15vw;padding:0 1vw 2vw}
+.portfolio .list{display:flex;flex-wrap:wrap;width:60vw; margin:0 auto;}
+.portfolio .list li{position:relative;width:25%;padding:0 1vw 2vw}
 .portfolio .list li .thumb{display:block;position:relative;overflow:hidden;height:11vw;border-radius:30px}
 .portfolio .list li .thumb:before{content:'';display:inline-block;position:absolute;top:0;left:0;z-index:1;width:100%;height:100%;border:5px solid #01d59b;border-radius:30px;opacity:0;transition:opacity .2s}
 .portfolio .list li .thumb img{display:inline-block;position:relative;left:50%;height:100%;width:auto;transform:translateX(-50%);transition:opacity .2s}
@@ -69,15 +69,9 @@ article{position:relative;min-height:100vh;padding:100px 15vw}
 .portfolio .list li .thumb.go:after{background-image:url(../img/ico_link.png)}
 .portfolio .list li .thumb.more:after{background-image:url(../img/ico_more.png)}
 .portfolio .list li:hover .thumb:after{opacity:1}
-.portfolio .list li .desc{position:absolute;left:1vw;bottom:98%;z-index:1;padding:20px;border-radius:30px;font-size:14px;color:#333;text-align:left;font-weight:300;background:#fff;opacity:0;transition:opacity .2s;pointer-events:none}
+.portfolio .list li .desc{position:absolute;left:1vw;bottom:98%;z-index:1;padding:20px;border-radius:30px;font-size:14px;color:#333;text-align:left;font-weight:300;white-space:nowrap;background:#fff;opacity:0;transition:opacity .2s;pointer-events:none}
 .portfolio .list li:hover .desc{opacity:1;pointer-events:auto}
 .portfolio .list li .desc:before{content:'';display:inline-block;position:absolute;top:initial;bottom:-10px;left:50px;z-index:2;border-left:20px solid #fff;border-top:20px solid transparent;transform:rotate(-45deg)}
-.portfolio .list li:nth-child(4) .desc,
-.portfolio .list li:nth-child(5) .desc,
-.portfolio .list li:nth-child(6) .desc{top:80%;bottom:initial}
-.portfolio .list li:nth-child(4) .desc::before,
-.portfolio .list li:nth-child(5) .desc::before,
-.portfolio .list li:nth-child(6) .desc::before{top:-10px;bottom:initial;transform:rotate(135deg)}
 .portfolio .list li .desc .tit{white-space:nowrap;font-size:1.2em;font-weight:500;color:inherit}
 .portfolio .list li .desc .sub_tit{display:inline-block;padding-top:.5em}
 .portfolio .list li .desc .note{color:#01d59b}
