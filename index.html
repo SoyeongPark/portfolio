@@ -89,13 +89,13 @@
 				<section class="cont">
 					<ul class="list">
 						<li>
-							<a href="https://www.clickn.co.kr/intro/design" target="_blank" class="thumb go">
+							<a href="javascript:popSlider.open('slider','sl_clickn_block')" class="thumb more">
 								<img src="./img/clickn_block.jpg" alt="클릭엔 에디터 콘텐츠 썸네일">
 							</a>
 							<div class="desc">
 								<p class="tit">클릭엔 에디터 컨텐츠 제작(반응형)</p>
 								<b class="sub_tit">주요특징</b><br>
-								- wigzig방식 웹 사이트 에디터의 컨텐츠 제작<br>
+								- wigzig방식 웹 빌더 에디터의 컨텐츠 제작<br>
 								- 사용자의 다양한 편집을 고려한 컴포넌트 작업<br>
 								- 기능 제한적인 환경에서 css를 활용한 다양한 스타일링 구현<br>
 								<b class="sub_tit">담당범위</b><br>
@@ -105,7 +105,7 @@
 							</div>
 						</li>
 						<li>
-							<a href="https://www.clickn.co.kr/intro/design" target="_blank" class="thumb go">
+							<a href="javascript:popSlider.open('slider','sl_clickn_admin')" class="thumb more">
 								<img src="./img/clicknadmin_main.jpg" alt="클릭엔 에디터 콘텐츠 썸네일">
 							</a>
 							<div class="desc">
@@ -279,6 +279,44 @@
 	</div>
 
 	<article class="layerpop" data-layer-id="slider">
+		<section class="layer_box sl_horizontal" id="sl_clickn_block">
+			<h3 class="tit">클릭엔 블록 콘텐츠</h3>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="./img/clickn/block1.jpg" alt="이미지"></div>
+					<div class="swiper-slide"><img src="./img/clickn/block2.jpg" alt="이미지"></div>
+					<div class="swiper-slide"><img src="./img/clickn/block3.jpg" alt="이미지"></div>
+					<div class="swiper-slide"><img src="./img/clickn/block4.jpg" alt="이미지"></div>
+					<div class="swiper-slide"><img src="./img/clickn/block5.jpg" alt="이미지"></div>
+					<div class="swiper-slide"><img src="./img/clickn/block6.jpg" alt="이미지"></div>
+				</div>
+			</div>
+			<p class="note">로그인 기반 서비스인 관계로 이미지로 대체합니다.</p>
+
+			<div class="swiper-button-prev"><span class="txt_out">이전</span></div>
+			<div class="swiper-button-next"><span class="txt_out">다음</span></div>
+
+			<div class="swiper-pagination"></div>
+		</section>
+
+		<section class="layer_box sl_horizontal" id="sl_clickn_admin">
+			<h3 class="tit">클릭엔 관리자 사이트</h3>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="./img/clickn/admin1.jpg" alt="이미지"></div>
+					<div class="swiper-slide"><img src="./img/clickn/admin2.jpg" alt="이미지"></div>
+					<div class="swiper-slide"><img src="./img/clickn/admin3.jpg" alt="이미지"></div>
+					<div class="swiper-slide"><img src="./img/clickn/admin4.jpg" alt="이미지"></div>
+				</div>
+			</div>
+			<p class="note">로그인 기반 서비스인 관계로 이미지로 대체합니다.</p>
+
+			<div class="swiper-button-prev"><span class="txt_out">이전</span></div>
+			<div class="swiper-button-next"><span class="txt_out">다음</span></div>
+
+			<div class="swiper-pagination"></div>
+		</section>
+
 		<section class="layer_box sl_horizontal" id="sl_lgweb">
 			<h3 class="tit">LG U+ 지능형영상보안솔루션 대시보드 웹 개발</h3>
 			<div class="swiper-container">
@@ -447,6 +485,30 @@ var popClose = function(){
 }
 
 var swiper = new Array();
+swiper['sl_clickn_block'] = new Swiper('#sl_clickn_block .swiper-container', {
+	loop: true,
+	speed: 1000,
+	navigation: {
+		nextEl: '#sl_clickn_block .swiper-button-next',
+		prevEl: '#sl_clickn_block .swiper-button-prev',
+	},
+	pagination: {
+		el: '#sl_clickn_block .swiper-pagination',
+		type: 'fraction',
+	}
+});
+swiper['sl_clickn_admin'] = new Swiper('#sl_clickn_admin .swiper-container', {
+	loop: true,
+	speed: 1000,
+	navigation: {
+		nextEl: '#sl_clickn_admin .swiper-button-next',
+		prevEl: '#sl_clickn_admin .swiper-button-prev',
+	},
+	pagination: {
+		el: '#sl_clickn_admin .swiper-pagination',
+		type: 'fraction',
+	}
+});
 swiper['sl_lgweb'] = new Swiper('#sl_lgweb .swiper-container', {
 	loop: true,
 	speed: 1000,
@@ -497,8 +559,6 @@ swiper['sl_cospo'] = new Swiper('#sl_cospo .swiper-container', {
 });
 var popSlider = {
 	open : function(popId,slId){
-	//popSlider.open('slider','sl_cospo')
-		console.log(slId);
 		$('#'+slId).addClass('on');
 		popOpen(popId);
 		swiper[slId].update();
